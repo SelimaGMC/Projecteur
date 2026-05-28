@@ -4,3 +4,5 @@ langchain-google-genai==0.0.6
 langchain-community==0.0.20
 chromadb
 bs4
+streamlit
+genai
