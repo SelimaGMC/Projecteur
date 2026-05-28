@@ -1,0 +1,1 @@
+GOOGLE_API_KEY: str = "AIzaSyBLHN5ysyQibxiDgHaHgmzylcMx0gmoU-g"
