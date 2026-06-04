@@ -45,10 +45,14 @@ def website_to_doc(link: str):
 
 
 def get_movie_titles(wiki_url):
-    
+    from urllib.request import Request, urlopen
+
+
     wikipedia.set_lang("fr")
-    response = requests.get(wiki_url)
-    soup = BeautifulSoup(response.content, 'html.parser')
+    hdr = {'User-Agent': 'Mozilla/5.0'}
+    req = Request(wiki_url, headers = hdr)
+    page = urlopen(req)
+    soup = BeautifulSoup(page, 'html.parser')
     
     tables = soup.find_all('table', {'class': 'wikitable'})
     
