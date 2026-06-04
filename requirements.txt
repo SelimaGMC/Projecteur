@@ -7,3 +7,6 @@ chromadb
 bs4
 streamlit
 genai
+requests 
+beautifulsoup4 
+wikipedia
