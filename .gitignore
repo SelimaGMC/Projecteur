@@ -1,5 +1,5 @@
 .venv
 
-secrets.py
+my_secrets.py
 __pycache__
 chroma_db

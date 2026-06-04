@@ -10,5 +10,5 @@ from langchain.vectorstores import Chroma
 import secrets
 import genai
 
-os.environ["GOOGLE_API_KEY"] = secrets.GOOGLE_API_KEY
+os.environ["GOOGLE_API_KEY"] = my_secrets.GOOGLE_API_KEY
 client = genai.Client(api_key=os.environ['GOOGLE_API_KEY'])
