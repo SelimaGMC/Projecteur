@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 venv
 .venv
 secrets.py
+=======
+.venv
+
+secrets.py
+__pycache__
+chroma_db
+>>>>>>> 4e6cef8afa246c4cecb2a085233b63ecaa6663f8
