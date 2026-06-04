@@ -17,9 +17,27 @@ os.environ["GOOGLE_API_KEY"] = secrets.GOOGLE_API_KEY
 #client = genai.Client(api_key=os.environ['GOOGLE_API_KEY'])
 
 
-loader = WebBaseLoader("https://blog.google/technology/ai/google-gemini-ai/")
-docs = loader.load()
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
+gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+
+
+def website_to_doc(link: str):
+    loader = WebBaseLoader(link)
+    docs = loader.load()
+
+    final_text = docs[0].page_content
+
+    #Utiliser des regex et splits ici pour récupérer les documents qui nous intéressent
+
+    # Convert the text to LangChain's `Document` format
+    docs = [Document(page_content=final_text, metadata={"source": "local"})]
+    vectorstore = Chroma.from_documents(
+                     documents=docs,                 # Data
+                     embedding=gemini_embeddings,    # Embedding model
+                     persist_directory="./chroma_db" # Directory to save data
+                     )
+    return vectorstore
 
 
 def charger_film_wikipedia(titre_film, nom_realisateur, langue="fr"):
