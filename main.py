@@ -73,18 +73,22 @@ def get_movie_titles(wiki_url):
     return movie_titles
 
 def load_movies(wiki_url: str) -> list[str]:
+    import time
     
     movie_titles = get_movie_titles(wiki_url)
                     
     print(f"{len(movie_titles)} films uniques trouvés. Interrogation de l'API Wikipedia...")
+
+    wikipedia.set_user_agent(secrets.CUSTOM_AGENT)
     
     movie_urls = []
+    i = 0
     for title in movie_titles:
+        i+=1
         try:
             # auto_suggest=False évite de se retrouver sur une page inattendue si le titre est très court
             page = wikipedia.page(title, auto_suggest=False)
             movie_urls.append(page.url)
-            
         except wikipedia.exceptions.DisambiguationError as e:
             # En cas d'homonymie (ex: "Lucy"), on essaie d'ajouter " (film)"
             try:
@@ -96,8 +100,10 @@ def load_movies(wiki_url: str) -> list[str]:
         except wikipedia.exceptions.PageError:
             # La page n'existe pas avec ce titre exact
             pass
+        if (i%10 ==0):
+            time.sleep(1)
             
-    print(movie_urls)
+    print(len(movie_urls))
     return movie_urls
 
 load_movies("https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_fran%C3%A7ais_au_box-office_mondial")
