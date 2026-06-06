@@ -6,3 +6,7 @@ secrets.py
 my_secrets.py
 __pycache__
 chroma_db
+test.py
+
+notes_perso.md
+films.db

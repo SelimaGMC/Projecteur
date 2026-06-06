@@ -1,109 +1,34 @@
 import os
-from langchain import PromptTemplate
-from langchain import hub
-from langchain.docstore.document import Document
-from langchain.document_loaders import WebBaseLoader
-from langchain.schema import StrOutputParser
-from langchain.schema.prompt_template import format_document
-from langchain.schema.runnable import RunnablePassthrough
-from langchain.vectorstores import Chroma
-from langchain_community.document_loaders import WikipediaLoader
-from langchain_core.documents import Document
 import secrets
-import genai
-import requests
-from bs4 import BeautifulSoup
-import wikipedia
-import re
 
-#client = genai.Client(api_key=os.environ['GOOGLE_API_KEY'])
 os.environ["GOOGLE_API_KEY"] = secrets.GOOGLE_API_KEY
-#client = genai.Client(api_key=os.environ['GOOGLE_API_KEY'])
+agent = secrets.CUSTOM_AGENT
+
+from crawler import load_movies_urls
+from retriever import build_knowledge_base
+from generator import create_rag_chain
+WIKI_BOX_OFFICE_URL = "https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_fran%C3%A7ais_au_box-office_mondial"
 
 
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-
-gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
-
-
-def website_to_doc(link: str):
-    loader = WebBaseLoader(link)
-    docs = loader.load()
-
-    final_text = docs[0].page_content
-
-    #Utiliser des regex et splits ici pour récupérer les sections qui nous intéressent
-
-    # Convert the text to LangChain's `Document` format
-    docs = [Document(page_content=final_text, metadata={"source": "local"})]
-    vectorstore = Chroma.from_documents(
-                     documents=docs,                 # Data
-                     embedding=gemini_embeddings,    # Embedding model
-                     persist_directory="./chroma_db" # Directory to save data
-                     )
-    return vectorstore
-
-
-def get_movie_titles(wiki_url):
-    from urllib.request import Request, urlopen
-
-
-    wikipedia.set_lang("fr")
-    hdr = {'User-Agent': 'Mozilla/5.0'}
-    req = Request(wiki_url, headers = hdr)
-    page = urlopen(req)
-    soup = BeautifulSoup(page, 'html.parser')
+def main():
+    urls = load_movies_urls(WIKI_BOX_OFFICE_URL, agent=agent)
+    print(f"Indexation de {len(urls)} pages Wikipedia...")
     
-    tables = soup.find_all('table', {'class': 'wikitable'})
-    
-    movie_titles = set() 
-    
-    for table in tables[:2]:
-        rows = table.find_all('tr')
-        for row in rows[1:]: # Ignorer les en-têtes
-            cols = row.find_all(['td', 'th'])
-            if len(cols) > 1:
-                title_cell = cols[1]
-                title = title_cell.get_text(strip=True)
-                
-                # Nettoyage des annotations type "[1]", "[2]" souvent présentes sur Wikipedia
-                clean_title = re.sub(r'\[.*?\]', '', title).strip()
-                if clean_title:
-                    movie_titles.add(clean_title)
-    return movie_titles
+    vectorstore = build_knowledge_base(urls)
+    chain = create_rag_chain(vectorstore)
 
-def load_movies(wiki_url: str) -> list[str]:
-    import time
-    
-    movie_titles = get_movie_titles(wiki_url)
-                    
-    print(f"{len(movie_titles)} films uniques trouvés. Interrogation de l'API Wikipedia...")
-
-    wikipedia.set_user_agent(secrets.CUSTOM_AGENT)
-    
-    movie_urls = []
-    i = 0
-    for title in movie_titles:
-        i+=1
+    print("\nSystème RAG prêt. Posez vos questions sur le cinéma français (Ctrl+C pour quitter).\n")
+    while True:
         try:
-            # auto_suggest=False évite de se retrouver sur une page inattendue si le titre est très court
-            page = wikipedia.page(title, auto_suggest=False)
-            movie_urls.append(page.url)
-        except wikipedia.exceptions.DisambiguationError as e:
-            # En cas d'homonymie (ex: "Lucy"), on essaie d'ajouter " (film)"
-            try:
-                page = wikipedia.page(f"{title} (film)")
-                movie_urls.append(page.url)
-            except:
-                pass # Si on ne trouve toujours pas, on ignore
-                
-        except wikipedia.exceptions.PageError:
-            # La page n'existe pas avec ce titre exact
-            pass
-        if (i%10 ==0):
-            time.sleep(1)
-            
-    print(len(movie_urls))
-    return movie_urls
+            question = input("Question : ").strip()
+            if not question:
+                continue
+            response = chain.invoke(question)
+            print(f"\nRéponse : {response}\n")
+        except KeyboardInterrupt:
+            print("\nAu revoir !")
+            break
 
-load_movies("https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_fran%C3%A7ais_au_box-office_mondial")
+
+if __name__ == "__main__":
+    main()
