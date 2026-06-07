@@ -1,0 +1,318 @@
+\documentclass[11pt]{report}
+ 
+% French packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+ 
+% Geometry
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+ 
+% Fonts
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+ 
+% Outline text
+\usepackage{fancybox}
+ 
+% Text pos
+\usepackage[absolute,overlay]{textpos}
+ 
+% Tables
+\usepackage{tabularx, makecell}
+ 
+% Custom colors
+\usepackage{xcolor}
+    \definecolor{jauneUTC}{RGB}{255,217,17}
+    \definecolor{jauneClairUTC}{RGB}{255,245,204}
+    \definecolor{grisUTC}{RGB}{89,89,89}
+    \definecolor{grisClairUTC}{RGB}{208,208,208}
+ 
+% Graphics
+\usepackage{graphicx}
+    \graphicspath{{./assets/}}
+\usepackage{floatrow}
+ 
+% Maths
+\usepackage{amsmath}
+ 
+% Multicol
+\usepackage{multicol}
+ 
+% Header/footer
+\usepackage{fancyhdr}
+    \fancypagestyle{UTC}{
+        \fancyhf{}
+        \setlength{\headheight}{27pt}
+        \fancyfoot[C]{\thepage}
+        \fancyhead[L]{\leftmark{}\vspace{0.1cm}}
+        \fancyhead[R]{\includegraphics[height=22pt]{assets/UTC.eps}}
+        \let\oldheadrule\headrule
+        \renewcommand{\headrule}{\color{jauneUTC}\oldheadrule}
+        \renewcommand{\headrulewidth}{2pt}
+        \addto\captionsfrench{\renewcommand{\contentsname}{Sommaire}}
+    }
+    \fancypagestyle{plain}{
+        \fancyhf{}
+        \fancyhead[C]{\includegraphics[height=22pt]{assets/UTC.eps}}
+        \fancyfoot[C]{\thepage}
+    }
+\pagestyle{UTC}
+ 
+% Chapter / paragraph formatting
+\usepackage{titlesec}
+    \titleformat{\chapter}[display]
+        {\centering \normalfont\huge\bfseries}{Partie\ \thechapter}{0pt}{\huge}
+        \titlespacing*{\chapter}{20pt}{-25pt}{20pt}
+    \titleformat{\paragraph}[display]
+        {\normalfont}{\theparagraph}{0pt}{\underline}
+        \titlespacing*{\paragraph}{20pt}{10pt}{3pt}
+ 
+% Box
+\usepackage{tcolorbox}
+ 
+% Hyperlinks
+\usepackage[pdfusetitle]{hyperref}
+    \hypersetup{hidelinks}
+ 
+% Sommaire management
+\usepackage{etoc}
+ 
+% Lorem ipsum (kept for compatibility)
+\usepackage{lipsum}
+ 
+% Glossaire
+\usepackage[toc,section=chapter]{glossaries}
+\makeglossaries
+ 
+\newcommand{\boxTEXTE}[2]{
+  \begin{tcolorbox}
+  [colframe=grisUTC,title={#1}, arc = 10]
+    #2
+  \end{tcolorbox}
+  }
+ 
+\newcommand{\boxIMAGE}[5]{
+    \begin{center}
+        \begin{tcolorbox}[
+            colback=white,
+            colframe=grisClairUTC,
+            halign=center,
+            arc=10pt,
+            width=#1,
+            ]
+            \begin{figure}[H]
+                \captionsetup{justification=centering}
+                \centering
+                \includegraphics[width= #2]{#3}
+                \caption{#4}
+                \label{#5}
+            \end{figure}
+        \end{tcolorbox}
+    \end{center}
+}
+ 
+\newcommand{\boxVide}[1]{
+  \begin{tcolorbox}[
+            colback=white,
+            colframe=grisClairUTC,
+            halign=center,
+            arc=10pt,
+            ]
+    #1
+  \end{tcolorbox}
+  }
+ 
+\author{Bouaziz Selima \\
+        Lozac'H Mael \\ 
+        Marko--Lafon Clothilde \\
+        Peter--Hemon Edeline}
+\title{Rapport Projet RAG -- Cinéma Français}
+ 
+\setcounter{secnumdepth}{2}
+
+
+\begin{document}
+
+% ---- PAGE DE GARDE ----
+\begin{titlepage}
+    \centering
+
+    \begin{figure}[h]
+        \centering
+        \begin{minipage}{.5\textwidth}
+            \includegraphics[height=3.5cm]{assets/UTC.eps}
+        \end{minipage}%
+        \begin{minipage}{.5\textwidth}
+            \begin{flushright}
+            {\Large
+            Université de \\
+            Technologie de \\
+            Compiègne
+            }
+            \end{flushright}
+        \end{minipage}
+    \end{figure}
+
+    \vspace{2cm}
+
+    {\color{jauneUTC}\rule{\textwidth}{2pt}}
+
+    \vspace{.7\baselineskip}
+    {\huge \textbf{LO17/AI31 : Indexation et Recherche d'Information}}
+
+    \vspace*{.5cm}
+    {\LARGE Rapport de Projet RAG -- Cinéma Français}
+
+    {\color{jauneUTC}\rule{\textwidth}{2pt}}
+
+    \vspace{3cm}
+
+    \LARGE
+
+    Membre du groupe (+pourcentages participation):
+    \\Bouaziz Selima \\
+        Lozac'H Mael \\ 
+        Marko--Lafon Clothilde \\
+        Peter--Hemon Edeline
+    \\ \vspace{1.5cm}
+    Groupe : \\
+    D1-G4
+    \vfill
+    \large
+    Printemps 2026
+
+\end{titlepage}
+
+\pagenumbering{arabic}
+\setcounter{tocdepth}{2}
+
+% ---- SOMMAIRE ----
+\tableofcontents
+
+\chapter{Introduction}
+
+Ce projet consiste à implémenter un système RAG (\textit{Retrieval-Augmented Generation}) sur le sujet de notre choix. Nous avons décidé de nous concentrer sur le cinéma français. Pour cela, nous nous sommes appuyés sur la liste Wikipedia des plus gros succès français au box-office mondial\footnote{\url{https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ\%C3\%A8s_fran\%C3\%A7ais_au_boxoffice_mondial}}, ainsi que sur les données des pages Wikipedia dédiées à chacun de ces films.
+
+Nous avons utilisé le modèle \textbf{Gemini} de Google pour le LLM, et suivi le notebook officiel de Google Gemini pour coder notre RAG.
+
+\section{Architecture générale}
+
+Nous avons divisé le code en plusieurs fichiers Python afin de faciliter la compréhension, la maintenance ainsi que les tests. Le système suit l'arborescence suivante~:
+
+\begin{verbatim}
+[main.py]
+ │
+ ├──→ [crawler.py]   → Récupération des URLs des films
+ │
+ ├──→ [retriever.py] → Construction de la base vectorielle
+ │     │
+ │     ├──→ [film_parser.py] → Extraction du contenu des pages Wikipédia
+ │     │
+ │     └──→ [database.py]   → Stockage SQL des données structurées
+ │
+ └──→ [generator.py] → Génération des réponses avec Gemini
+\end{verbatim}
+
+Les clés API Google Gemini sont stockées dans un fichier dédié \texttt{secrets.py} afin de ne pas les exposer dans le code principal.
+
+\chapter{Description des modules}
+
+\section{Module principal (\texttt{main.py})}
+
+Ce fichier est le point d'entrée du programme : c'est lui qui orchestre l'exécution des quatre autres modules dans l'ordre, correspondant aux étapes suivantes~:
+
+\begin{itemize}
+    \item \textbf{Configuration~:} initialisation de la clé API Google Gemini et de l'agent utilisateur.
+    \item \textbf{Crawling~:} récupération des URLs des pages Wikipedia de chacun des films via la page initiale qui les liste.
+    \item \textbf{Indexation~:} construction de la base vectorielle à partir de ces pages.
+    \item \textbf{Interaction~:} boucle de questions/réponses entre le système et l'utilisateur. L'utilisateur pose une question, et le système affiche la réponse générée par Gemini. Cette boucle continue jusqu'à ce que l'utilisateur l'interrompe (Ctrl+C).
+\end{itemize}
+
+
+\section{Module de crawler (\texttt{crawler.py})}
+
+Ce fichier comporte deux fonctions principales~:
+
+\begin{itemize}
+    \item \textbf{\texttt{get\_movie\_titles()}~:} cette première fonction extrait le titre des films depuis la page Wikipedia initiale. Pour cela, elle utilise la librairie \texttt{BeautifulSoup} pour parser le contenu HTML, cible les balises \texttt{<table class='wikitable'>} et récupère la deuxième colonne de chaque ligne, soit le titre d'un film. Elle nettoie ensuite les références de type \texttt{[1]} avec un regex (\texttt{r'\textbackslash[.*?\textbackslash]'}).
+
+    \item \textbf{\texttt{load\_movie\_urls()}~:} cette seconde fonction convertit chaque titre en URL Wikipedia via l'API Wikipedia. Elle gère plusieurs cas spécifiques afin d'éviter les bugs ou erreurs~: elle respecte les limites de l'API en faisant une pause d'une seconde toutes les 10 requêtes, filtre les pages inexistantes, et gère les cas d'homonymie (par exemple le film \textit{Lucy} et le personnage historique du même nom). Le système essaie d'abord le titre exact, puis cherche \texttt{titre (film)} si cela échoue.
+\end{itemize}
+
+Parmi les choix d'implémentation notables~:
+\begin{itemize}
+    \item L'utilisation d'un \texttt{set} pour les titres permet d'éviter les doublons entre les deux tableaux de films.
+    \item \texttt{auto\_suggest = False} permet d'éviter les suggestions automatiques de Wikipedia, qui pourraient mener à des pages non souhaitées.
+\end{itemize}
+
+\section{Module d'extraction (\texttt{film\_parser.py})}
+
+Ce fichier est le c\oe{}ur de l'extraction des données. Il permet de rendre notre base suffisamment complète pour répondre aux questions de l'utilisateur.
+
+Contrairement au notebook qui automatise ce processus avec \texttt{UnstructuredURLLoader}, nous avons réalisé un parsing personnalisé au format des pages Wikipedia. La page de chaque film est analysée, et deux sorties différentes sont produites selon le type de données~:
+
+\begin{itemize}
+    \item Le \texttt{str} contient un texte continu destiné à la recherche vectorielle~: l'introduction si elle existe, ainsi que le synopsis, l'accueil critique et l'analyse.
+    \item Le \texttt{dict} contient des données structurées à interroger via SQL~: la fiche technique, la distribution et les distinctions.
+\end{itemize}
+
+L'élément renvoyé suit donc un format \texttt{tuple[str, dict]}.
+
+Ces éléments sont parcourus en utilisant \texttt{BeautifulSoup}~: les balises \texttt{<h2>} organisent le contenu, les balises \texttt{<p>} fournissent le texte des paragraphes, et les balises \texttt{<ul>} ou \texttt{<ol>} les listes. Les références et espaces multiples sont nettoyés grâce à la fonction \texttt{clean\_wiki\_refs()}.
+
+Les distinctions sont organisées par sous-catégories (par exemple César) sous un format avec crochets (\texttt{[Catégorie]}). Ces fonctions sont compatibles avec l'ancien comme avec le nouveau format Wikipedia (depuis 2023).
+
+\section{Module de base de données SQL (\texttt{database.py})}
+
+Ce fichier gère le stockage des données structurées renvoyées sous forme de dictionnaire. Les tables gérées sont les suivantes~:
+
+\begin{itemize}
+    \item \textbf{\texttt{films}~:} le tableau maître avec les identifiants uniques et les URLs.
+    \item \textbf{\texttt{fiche\_technique}~:} données stockées sous forme de paires clé/valeur (par exemple \texttt{Réalisateur~: Duccio Tessari}), de manière flexible -- chaque film peut avoir des champs différents.
+    \item \textbf{\texttt{distribution}~:} la liste des acteurs et de leurs rôles.
+    \item \textbf{\texttt{distinctions}~:} la liste des récompenses, où le contexte est récupéré avec \texttt{[Catégorie]}.
+\end{itemize}
+
+Ce module contient deux fonctions~:
+
+\begin{itemize}
+    \item \textbf{\texttt{init\_db()}~:} crée les tables si elles n'existent pas déjà, puis retourne une connexion SQLite. L'utilisation de SQLite (plutôt que PostgreSQL, par exemple) est pertinente car elle ne nécessite aucun serveur.
+    \item \textbf{\texttt{save\_film()}~:} vérifie que l'URL n'existe pas déjà, insère le film et ses données associées, et utilise \texttt{executemany()} pour réaliser un \textit{bulk insert} efficace.
+\end{itemize}
+
+Les vérifications d'existence, comme la contrainte \texttt{UNIQUE} sur l'attribut \texttt{url} ou le \texttt{IF NOT EXISTS}, permettent de relancer l'indexation sans recréer la base ni insérer de doublons.
+
+\section{Module de retriever (\texttt{retriever.py})}
+
+Ce fichier construit la base vectorielle qui permettra la recherche sémantique. Il suit les étapes suivantes~:
+
+\begin{enumerate}
+    \item \textbf{Vérification de persistance~:} si Chroma existe déjà, on le charge directement.
+    \item \textbf{Extraction~:} pour chaque URL, on extrait le texte et les données avec \texttt{film\_parser.py}.
+    \item \textbf{Découpage~:} le texte est divisé en chunks de 1000~caractères, avec un chevauchement de 200 (paramètres issus du notebook).
+    \item \textbf{Embeddings~:} les chunks sont convertis en vecteurs numériques via Gemini.
+    \item \textbf{Stockage~:} les vecteurs et données sont sauvegardés dans Chroma.
+\end{enumerate}
+
+Pour respecter les limites de l'API Gemini (100 requêtes par minute), le système traite les embeddings en lots de 90 et marque une pause d'une minute entre chaque lot, évitant ainsi les erreurs HTTP~429 (\textit{Too Many Requests}). Un logging d'avancement est affiché toutes les 10 pages pour suivre la progression.
+
+\section{Module de génération (\texttt{generator.py})}
+
+Ce fichier définit la chaîne RAG complète, avec les composants suivants~:
+
+\begin{itemize}
+    \item \textbf{Retriever~:} recherche des cinq chunks les plus pertinents dans la base vectorielle.
+    \item \textbf{\texttt{format\_docs}~:} concatène les chunks trouvés en une seule chaîne de texte.
+    \item \textbf{Prompt~:} intègre le contexte et la question de l'utilisateur.
+    \item \textbf{LLM~:} Gemini 2.0 Flash, qui génère la réponse.
+    \item \textbf{OutputParser~:} extrait le texte de la réponse.
+\end{itemize}
+
+Ce module suit entièrement le notebook officiel, hormis l'adaptation du prompt pour le cinéma français et le remplacement du modèle par Gemini 2.0 Flash à la place de Gemini Pro.
+
+
+\chapter{Conclusion}
+
+
+\end{document}
