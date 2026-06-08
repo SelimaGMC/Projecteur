@@ -1,4 +1,5 @@
 import os
+import re
 import time
 import secrets
 
@@ -7,7 +8,7 @@ os.environ["GOOGLE_API_KEY"] = secrets.GOOGLE_API_KEY
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores.chroma import Chroma
 VECT_STORE = Chroma
 RETRIEVER_DIR = "./chroma_db"
 
@@ -18,7 +19,7 @@ from film_parser import extract_movie_sections
 from database import init_db, save_film, DB_PATH
 
 def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embedding=GEMINI_EMBEDDING, db_path=DB_PATH) -> VECT_STORE:
-    # il ne faut pas tout réindexer (on vérifie si Chroma existe déjà sur le disque)
+
     if os.path.exists(retriever_dir) and os.listdir(retriever_dir):
         db = Chroma(persist_directory=retriever_dir, embedding_function=embedding)
         if db._collection.count() > 0:
@@ -28,7 +29,7 @@ def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embe
 
     sql_conn = init_db(db_path)
 
-    # le séparateur en chunks (pas présent dans le notebook)
+    # le séparateur en chunks
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     all_chunks = []
 
@@ -60,11 +61,21 @@ def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embe
             time.sleep(60)
         else:
             print(f"  Batch 1/{n_batches}...")
-        all_embeddings.extend(embedding.embed_documents(texts[start:start + BATCH_SIZE]))
+        
+        while True:
+            try:
+                all_embeddings.extend(embedding.embed_documents(texts[start:start + BATCH_SIZE]))
+                break
+            except Exception as e:
+                if "429" in str(e) or "quota" in str(e).lower():
+                    print(f"  Quota dépassé (429). Attente 60s avant retry...")
+                    time.sleep(60)
+                else:
+                    raise
 
     print("Création de la base vectorielle Chroma...")
-    vectorstore = Chroma.from_embeddings(
-        text_embeddings=list(zip(texts, all_embeddings)),
+    vectorstore = Chroma.from_texts(
+        texts=list(zip(texts, all_embeddings)),
         embedding=embedding,
         metadatas=metadatas,
         ids=[f"doc_{i}" for i in range(len(texts))],

@@ -11,8 +11,9 @@ WIKI_BOX_OFFICE_URL = "https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3
 
 
 def main():
-    urls = load_movies_urls(WIKI_BOX_OFFICE_URL, agent=agent)
+    urls, movies = load_movies_urls(WIKI_BOX_OFFICE_URL, agent=agent)
     print(f"Indexation de {len(urls)} pages Wikipedia...")
+    print(f"Films disponibles: {movies}")
     
     vectorstore = build_knowledge_base(urls)
     chain = create_rag_chain(vectorstore)

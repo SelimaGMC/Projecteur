@@ -29,7 +29,7 @@ def get_movie_titles(wiki_url) -> set :
                     movie_titles.add(clean_title)
     return movie_titles
 
-def load_movies_urls(wiki_url: str, agent: str) -> list[str]:
+def load_movies_urls(wiki_url: str, agent: str) -> tuple[list[str], list[str]]:
     import time
     
     movie_titles = get_movie_titles(wiki_url)
@@ -39,6 +39,7 @@ def load_movies_urls(wiki_url: str, agent: str) -> list[str]:
     wikipedia.set_user_agent(agent)
     
     movie_urls = []
+    available_titles = []
     i = 0
     for title in movie_titles:
         i+=1
@@ -46,11 +47,13 @@ def load_movies_urls(wiki_url: str, agent: str) -> list[str]:
             # auto_suggest=False évite de se retrouver sur une page inattendue si le titre est très court
             page = wikipedia.page(title, auto_suggest=False)
             movie_urls.append(page.url)
+            available_titles.append(title)
         except wikipedia.exceptions.DisambiguationError:
             # En cas d'homonymie (ex: "Lucy"), on essaie d'ajouter " (film)"
             try:
                 page = wikipedia.page(f"{title} (film)")
                 movie_urls.append(page.url)
+                available_titles.append(title)
             except:
                 pass # Si on ne trouve toujours pas, on ignore
                 
@@ -60,5 +63,5 @@ def load_movies_urls(wiki_url: str, agent: str) -> list[str]:
         if (i%10 ==0):
             time.sleep(1)
             
-    print(len(movie_urls))
-    return movie_urls
+    #print(len(movie_urls))
+    return movie_urls, available_titles
