@@ -4,9 +4,11 @@
 
 ## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+L'IA utilisée dans ce RAG nécessite l'installation d'Ollama. Nous vous conseillons donc de lancer les commandes suivantes sur votre terminal PowerShell:
+`bash` irm https://ollama.com/install.ps1 | iex `bash`
+`bash` ollama pull llama3.2 `bash`
+`bash` $env:CUDA_VISIBLE_DEVICES="-1" `bash`
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
 ## Add your files
 

@@ -62,8 +62,8 @@ def load_movies_urls(wiki_url: str, agent: str) -> tuple[list[str], list[str]]:
             pass
         if (i%10 ==0):
             time.sleep(1)
-        if i >9:
-            return movie_urls, available_titles
+        #if i >9:
+            #return movie_urls, available_titles
             
     #print(len(movie_urls))
     return movie_urls, available_titles

@@ -1,8 +1,5 @@
 import os
 import time
-import secrets
-
-os.environ["GOOGLE_API_KEY"] = secrets.GOOGLE_API_KEY
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
@@ -11,13 +8,15 @@ from langchain_community.vectorstores.chroma import Chroma
 VECT_STORE = Chroma
 RETRIEVER_DIR = "./chroma_db"
 
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-GEMINI_EMBEDDING = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+from langchain_community.embeddings import OllamaEmbeddings
+# "nomic-embed-text" est un excellent modèle d'embedding léger. 
+# (à télécharger via: ollama pull nomic-embed-text)
+OLLAMA_EMBEDDING = OllamaEmbeddings(model="nomic-embed-text")
 
 from film_parser import extract_movie_sections
 from database import init_db, save_film, DB_PATH
 
-def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embedding=GEMINI_EMBEDDING, db_path=DB_PATH) -> VECT_STORE:
+def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embedding=OLLAMA_EMBEDDING, db_path=DB_PATH) -> VECT_STORE:
     # il ne faut pas tout réindexer (on vérifie si Chroma existe déjà sur le disque)
     if os.path.exists(retriever_dir) and os.listdir(retriever_dir):
         db = Chroma(persist_directory=retriever_dir, embedding_function=embedding)
@@ -46,30 +45,35 @@ def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embe
 
     texts = [chunk.page_content for chunk in all_chunks]
     metadatas = [chunk.metadata for chunk in all_chunks]
+    ids = [f"doc_{i}" for i in range(len(texts))]
 
-    # Gemini embedding : limite de 100 requêtes/min → batches de 90 avec pause entre chaque
-    # On pré-calcule tous les embeddings avant d'insérer dans Chroma pour éviter les 429
-    BATCH_SIZE = 90
-    n_batches = (len(texts) - 1) // BATCH_SIZE + 1
-    print(f"Calcul des embeddings pour {len(texts)} chunks ({n_batches} batches)...")
+    if not texts:
+        print("Erreur : Aucun texte n'a été extrait. Impossible de créer la base.")
+        return None
 
-    all_embeddings = []
-    for b, start in enumerate(range(0, len(texts), BATCH_SIZE)):
-        if b > 0:
-            print(f"  Batch {b + 1}/{n_batches} ({start}/{len(texts)})... (attente 60s)")
-            time.sleep(60)
-        else:
-            print(f"  Batch 1/{n_batches}...")
-        all_embeddings.extend(embedding.embed_documents(texts[start:start + BATCH_SIZE]))
+    BATCH_SIZE = 50  # On traite les requêtes 50 par 50
+    print(f"\nCalcul des embeddings et création de Chroma par lots de {BATCH_SIZE}...")
 
-    print("Création de la base vectorielle Chroma...")
+    print(f"  -> Initialisation avec les {min(BATCH_SIZE, len(texts))} premiers chunks...")
     vectorstore = Chroma.from_texts(
-        texts=list(zip(texts, all_embeddings)),
+        texts=texts[:BATCH_SIZE],
         embedding=embedding,
-        metadatas=metadatas,
-        ids=[f"doc_{i}" for i in range(len(texts))],
+        metadatas=metadatas[:BATCH_SIZE],
+        ids=ids[:BATCH_SIZE],
         persist_directory=retriever_dir
     )
+    print(f"  [Progression] {min(BATCH_SIZE, len(texts))}/{len(texts)} chunks indexés.")
+
+    for start in range(BATCH_SIZE, len(texts), BATCH_SIZE):
+        end = start + BATCH_SIZE
+        
+        # add_texts permet d'ajouter des documents à une base Chroma existante
+        vectorstore.add_texts(
+            texts=texts[start:end],
+            metadatas=metadatas[start:end],
+            ids=ids[start:end]
+        )
+        print(f"  [Progression] {min(end, len(texts))}/{len(texts)} chunks indexés.")
     return vectorstore
 
 # ================================== Tester le retriever ==================================
