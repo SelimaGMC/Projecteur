@@ -4,7 +4,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.chat_models import ChatOllama
 import sqlite3
 
-
 from retriever import VECT_STORE    # Chroma
 from database import DB_PATH        
 
