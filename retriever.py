@@ -1,5 +1,6 @@
 import os
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
@@ -16,7 +17,7 @@ OLLAMA_EMBEDDING = OllamaEmbeddings(model="nomic-embed-text")
 from film_parser import extract_movie_sections
 from database import init_db, save_film, DB_PATH
 
-def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embedding=OLLAMA_EMBEDDING, db_path=DB_PATH) -> VECT_STORE:
+def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embedding=OLLAMA_EMBEDDING, db_path=DB_PATH) -> VECT_STORE | None:
     # il ne faut pas tout réindexer (on vérifie si Chroma existe déjà sur le disque)
     if os.path.exists(retriever_dir) and os.listdir(retriever_dir):
         db = Chroma(persist_directory=retriever_dir, embedding_function=embedding)
@@ -52,28 +53,28 @@ def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embe
         return None
 
     BATCH_SIZE = 50  # On traite les requêtes 50 par 50
+    MAX_WORKERS = 4  # Nombre de lots embeddés en parallèle (cf. OLLAMA_NUM_PARALLEL côté serveur)
     print(f"\nCalcul des embeddings et création de Chroma par lots de {BATCH_SIZE}...")
 
-    print(f"  -> Initialisation avec les {min(BATCH_SIZE, len(texts))} premiers chunks...")
-    vectorstore = Chroma.from_texts(
-        texts=texts[:BATCH_SIZE],
-        embedding=embedding,
-        metadatas=metadatas[:BATCH_SIZE],
-        ids=ids[:BATCH_SIZE],
-        persist_directory=retriever_dir
-    )
-    print(f"  [Progression] {min(BATCH_SIZE, len(texts))}/{len(texts)} chunks indexés.")
+    vectorstore = Chroma(persist_directory=retriever_dir, embedding_function=embedding)
 
-    for start in range(BATCH_SIZE, len(texts), BATCH_SIZE):
-        end = start + BATCH_SIZE
-        
-        # add_texts permet d'ajouter des documents à une base Chroma existante
-        vectorstore.add_texts(
-            texts=texts[start:end],
-            metadatas=metadatas[start:end],
-            ids=ids[start:end]
-        )
-        print(f"  [Progression] {min(end, len(texts))}/{len(texts)} chunks indexés.")
+    def _embed_batch(start, end):
+        return start, end, embedding.embed_documents(texts[start:end])
+
+    batches = [(start, min(start + BATCH_SIZE, len(texts))) for start in range(0, len(texts), BATCH_SIZE)]
+    indexed = 0
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = [executor.submit(_embed_batch, start, end) for start, end in batches]
+        for future in as_completed(futures):
+            start, end, embeddings = future.result()
+            vectorstore._collection.upsert(
+                embeddings=embeddings,
+                documents=texts[start:end],
+                metadatas=metadatas[start:end],
+                ids=ids[start:end]
+            )
+            indexed += end - start
+            print(f"  [Progression] {indexed}/{len(texts)} chunks indexés.")
     return vectorstore
 
 # ================================== Tester le retriever ==================================
