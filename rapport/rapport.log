@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.9)  9 JUN 2026 22:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.9)  9 JUN 2026 22:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -892,7 +892,8 @@ Package glossaries Info: Writing glossary file rapport.glo on input line 86.
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 135.
  (c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./rapport.aux)
+)
+No file rapport.aux.
 \openout1 = `rapport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
@@ -916,7 +917,6 @@ LaTeX Font Info:    ... okay on input line 135.
 Package babel Info: 'french' activates 'french' shorthands.
 (babel)             Reported on input line 135.
 LaTeX Info: Redefining \degres on input line 135.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1050,127 +1050,140 @@ l.195     \chapter
 
 ]
 Chapitre 1.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 210.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 209.
 (c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:212: LaTeX Error: Unicode character │ (U+2502)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:211: LaTeX Error: Unicode character │ (U+2502)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.212  │
+l.211  │
           
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:213: LaTeX Error: Unicode character ├ (U+251C)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:212: LaTeX Error: Unicode character ├ (U+251C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.213 ...py] → Récupération des URLs des films
+l.212 ...py] → Récupération des URLs des films
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:213: LaTeX Error: Unicode character ─ (U+2500)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:212: LaTeX Error: Unicode character ─ (U+2500)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.213 ...py] → Récupération des URLs des films
+l.212 ...py] → Récupération des URLs des films
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:213: LaTeX Error: Unicode character ─ (U+2500)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:212: LaTeX Error: Unicode character ─ (U+2500)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.213 ...py] → Récupération des URLs des films
+l.212 ...py] → Récupération des URLs des films
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 213.
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 212.
 (c:/texlive/2026/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:214: LaTeX Error: Unicode character │ (U+2502)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:213: LaTeX Error: Unicode character │ (U+2502)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214  │
+l.213  │
           
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:215: LaTeX Error: Unicode character ├ (U+251C)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:214: LaTeX Error: Unicode character ├ (U+251C)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 ...] → Construction de la base vectorielle
+l.214 ...] → Construction de la base vectorielle
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:215: LaTeX Error: Unicode character ─ (U+2500)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:214: LaTeX Error: Unicode character ─ (U+2500)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 ...] → Construction de la base vectorielle
+l.214 ...] → Construction de la base vectorielle
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:215: LaTeX Error: Unicode character ─ (U+2500)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:214: LaTeX Error: Unicode character ─ (U+2500)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 ...] → Construction de la base vectorielle
+l.214 ...] → Construction de la base vectorielle
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:216: LaTeX Error: Unicode character │ (U+2502)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:215: LaTeX Error: Unicode character │ (U+2502)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216  │     │
+l.215  │     │
+                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:215: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.215  │     │
                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1183,7 +1196,59 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216  │     │
+l.216 ...xtraction du contenu des pages Wikipédia
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:216: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.216 ...xtraction du contenu des pages Wikipédia
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:216: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.216 ...xtraction du contenu des pages Wikipédia
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:216: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.216 ...xtraction du contenu des pages Wikipédia
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:217: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.217  │     │
                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1196,59 +1261,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.217 ...xtraction du contenu des pages Wikipédia
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:217: LaTeX Error: Unicode character ├ (U+251C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.217 ...xtraction du contenu des pages Wikipédia
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:217: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.217 ...xtraction du contenu des pages Wikipédia
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:217: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.217 ...xtraction du contenu des pages Wikipédia
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:218: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.218  │     │
+l.217  │     │
                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1261,8 +1274,47 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.218  │     │
-                  
+l.218 ...�� Stockage SQL des données structurées
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:218: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 ...�� Stockage SQL des données structurées
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:218: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 ...�� Stockage SQL des données structurées
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:218: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 ...�� Stockage SQL des données structurées
+                                                  
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -1274,98 +1326,98 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219 ...�� Stockage SQL des données structurées
-                                                  
+l.219        │
+                
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:219: LaTeX Error: Unicode character └ (U+2514)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:220: LaTeX Error: Unicode character └ (U+2514)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219 ...�� Stockage SQL des données structurées
+l.220 ...ckage vertorstore des données textuelles
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:219: LaTeX Error: Unicode character ─ (U+2500)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:220: LaTeX Error: Unicode character ─ (U+2500)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219 ...�� Stockage SQL des données structurées
+l.220 ...ckage vertorstore des données textuelles
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:219: LaTeX Error: Unicode character ─ (U+2500)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:220: LaTeX Error: Unicode character ─ (U+2500)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219 ...�� Stockage SQL des données structurées
+l.220 ...ckage vertorstore des données textuelles
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:220: LaTeX Error: Unicode character │ (U+2502)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:221: LaTeX Error: Unicode character │ (U+2502)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.220  │
+l.221  │
           
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:221: LaTeX Error: Unicode character └ (U+2514)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:222: LaTeX Error: Unicode character └ (U+2514)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.221 ...�� Génération des réponses avec Gemini
+l.222 ...énération des réponses avec Ollama 3.2
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:221: LaTeX Error: Unicode character ─ (U+2500)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:222: LaTeX Error: Unicode character ─ (U+2500)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.221 ...�� Génération des réponses avec Gemini
+l.222 ...énération des réponses avec Ollama 3.2
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:221: LaTeX Error: Unicode character ─ (U+2500)
+c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:222: LaTeX Error: Unicode character ─ (U+2500)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.221 ...�� Génération des réponses avec Gemini
+l.222 ...énération des réponses avec Ollama 3.2
                                                   
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1377,11 +1429,11 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 228.
+(epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 228.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 225.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 [2
 
@@ -1394,21 +1446,21 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 288.
+(epstopdf)             \includegraphics on input line 285.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 288.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 285.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 [3
 
 ]
-Overfull \hbox (1.11668pt too wide) in paragraph at lines 341--343
+Overfull \hbox (1.11668pt too wide) in paragraph at lines 338--340
 []\T1/lmss/m/n/10.95 Ensuite l'ex-trac-tion. Pour chaque URL, on ex-trait le texte et les don-n�es avec film_parser.py. 
  []
 
 Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 356.
+(babel)             Reported on input line 353.
 Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:42:37
 (epstopdf)                    size: 276816 bytes
@@ -1416,11 +1468,11 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 356.
+(epstopdf)             \includegraphics on input line 353.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 356.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 353.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 [4]
 Package epstopdf Info: Source file: <assets/UTC.eps>
@@ -1430,11 +1482,11 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 370.
+(epstopdf)             \includegraphics on input line 367.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 370.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 367.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
  [5]
 Chapitre 3.
@@ -1445,11 +1497,11 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 372.
+(epstopdf)             \includegraphics on input line 369.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 372.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 369.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 [6
 
@@ -1467,11 +1519,11 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 377.
+(epstopdf)             \includegraphics on input line 374.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 377.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 374.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 [7
 
@@ -1491,15 +1543,15 @@ Package rerunfilecheck Info: Checksums for `rapport.out':
 (rerunfilecheck)             After:  518939560E0E74B2E4D1EBBF25FCB517;2117.
  ) 
 Here is how much of TeX's memory you used:
- 35490 strings out of 467167
- 708028 string characters out of 5413692
+ 35487 strings out of 467167
+ 707980 string characters out of 5413692
  1274560 words of memory out of 5000000
- 64230 multiletter control sequences out of 15000+600000
+ 64229 multiletter control sequences out of 15000+600000
  659887 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,15n,108p,2531b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rapport.pdf (8 pages, 140498 bytes).
+Output written on rapport.pdf (8 pages, 140797 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream

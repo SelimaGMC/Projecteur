@@ -309,9 +309,6 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd
 INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd
 INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmss10.tfm
-INPUT ./rapport.aux
-INPUT ./rapport.aux
-INPUT rapport.aux
 OUTPUT rapport.aux
 INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii

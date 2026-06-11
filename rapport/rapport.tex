@@ -196,11 +196,10 @@
  
     Ce projet consiste à implémenter un RAG sur le sujet de notre choix. Nous avons donc décidé de
     partir sur le cinéma français. Pour cela, nous avons choisi de nous appuyer sur la liste Wikipedia des
-    plus gros succès français au box office mondial (voir annexe), ainsi que sur les données des pages
+    plus grands succès français au box office mondial (voir annexe), ainsi que sur les données des pages
     Wikipedia dédiées à chacun de ces films.
  
-    Nous avons utilisé le modèle Gemini de Google pour LLM, et suivi le notebook officiel de Google
-    Gemini pour coder notre RAG.
+    Nous avons utilisé le modèle Ollama pour LLM, et suivi le notebook officiel proposé en pièce jointe pour coder notre RAG.
  
     \section{Architecture générale}
  
@@ -208,7 +207,7 @@
     maintenance ainsi que les tests. Le système suit l'arborescence suivante :
  
     \begin{verbatim}
-[main.py]
+    [main.py]
  │
  ├──→ [crawler.py] → Récupération des URLs des films
  │
@@ -216,14 +215,12 @@
  │     │
  │     ├──→ [film_parser.py] → Extraction du contenu des pages Wikipédia
  │     │
- │     └──→ [database.py] → Stockage SQL des données structurées
+ │     ├──→ [database.py] → Stockage SQL des données structurées
+       │
+       └──→ [retriever.py] → Stockage vertorstore des données textuelles
  │
- └──→ [generator.py] → Génération des réponses avec Gemini
+ └──→ [generator.py] → Génération des réponses avec Ollama 3.2
     \end{verbatim}
- 
-    Les clés API Google Gemini sont elles stockées dans un fichier dédié secrets.py pour ne pas les
-    exposer dans le code principal.
-
     
     \chapter{Description des modules}
  
