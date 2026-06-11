@@ -1,8 +1,8 @@
 import os
-import secrets
+import project_secrets
 
 os.environ["GOOGLE_API_KEY"] = secrets.GOOGLE_API_KEY
-agent = secrets.CUSTOM_AGENT
+agent = project_secrets.CUSTOM_AGENT
 
 from crawler import load_movies_urls
 from retriever import build_knowledge_base
