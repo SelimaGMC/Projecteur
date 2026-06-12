@@ -1,5 +1,6 @@
 import requests
 import re
+from urllib.parse import unquote
 from bs4 import BeautifulSoup, Tag
 
 SECTIONS_TEXT_TO_KEEP = {'synopsis', 'accueil', 'analyse', 'réception', 'reception'}
@@ -78,14 +79,18 @@ def flat_elems(parent: Tag):
 def extract_movie_sections(url: str) -> tuple[str, dict]:
     """Charge la page Wikipedia une seule fois et retourne un tuple :
     - [0] str  : intro + sections textuelles (pour la base vectorielle)
-    - [1] dict : fiche technique, distribution, distinctions (pour la base SQL)
+    - [1] dict : titre, fiche technique, distribution, distinctions
     """
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     soup = BeautifulSoup(response.text, 'html.parser')
 
+    # Titre de la page, utilisé comme contexte pour chaque chunk indexé (cf. retriever.py)
+    h1 = soup.find('h1', {'id': 'firstHeading'})
+    titre = h1.get_text(strip=True) if h1 else unquote(url.rsplit('/', 1)[-1]).replace('_', ' ')
+
     parser_output = soup.find('div', {'class': 'mw-parser-output'})
     if not parser_output:
-        return "", {'url': url, 'fiche_technique': {}, 'distribution': [], 'distinctions': []}
+        return "", {'url': url, 'titre': titre, 'fiche_technique': {}, 'distribution': [], 'distinctions': []}
 
     current_title: str | None = None
     text_result: list[str] = []
@@ -178,5 +183,5 @@ def extract_movie_sections(url: str) -> tuple[str, dict]:
 
     return (
         "\n\n".join(text_result),
-        {'url': url, 'fiche_technique': fiche, 'distribution': distribution, 'distinctions': distinctions},
+        {'url': url, 'titre': titre, 'fiche_technique': fiche, 'distribution': distribution, 'distinctions': distinctions},
     )

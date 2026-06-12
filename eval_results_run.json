@@ -1,0 +1,126 @@
+{
+  "label": "run",
+  "results": [
+    {
+      "type": "factuelle",
+      "question": "Qui sont les réalisateurs du film Intouchables ?",
+      "expected_keywords": [
+        "Nakache",
+        "Toledano"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Les réalisateurs du film Intouchables sont Éric Toledano et Olivier Nakache."
+    },
+    {
+      "type": "factuelle",
+      "question": "Quel acteur interprète le rôle de Driss dans le film Intouchables ?",
+      "expected_keywords": [
+        "Omar Sy"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Omar Sy interprète le rôle de Driss dans le film Intouchables."
+    },
+    {
+      "type": "factuelle",
+      "question": "Qui a réalisé le film Bienvenue chez les Ch'tis ?",
+      "expected_keywords": [
+        "Dany Boon"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Le film Bienvenue chez les Ch'tis a été réalisé par Dany Boon."
+    },
+    {
+      "type": "factuelle",
+      "question": "Quels sont les deux acteurs principaux du film La Grande Vadrouille ?",
+      "expected_keywords": [
+        "Bourvil",
+        "Funès"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Les deux acteurs principaux du film La Grande Vadrouille sont Bourvil et Louis de Funès."
+    },
+    {
+      "type": "factuelle",
+      "question": "Quelle actrice interprète Amélie Poulain dans Le Fabuleux Destin d'Amélie Poulain ?",
+      "expected_keywords": [
+        "Audrey Tautou"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Audrey Tautou interprète le rôle d'Amélie Poulain dans Le Fabuleux Destin d'Amélie Poulain."
+    },
+    {
+      "type": "narrative",
+      "question": "Quel est le sujet principal du film Intouchables ?",
+      "expected_keywords": [
+        "tétraplégique",
+        "banlieue"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 0.5,
+      "answer": "Le film Intouchables explore la relation entre deux hommes issus de milieux sociaux très différents : Philippe, un homme riche et tétraplégique, et Driss, un jeune homme d'origine sénégalaise sorti récemment de prison. Cette relation inattendue devient le sujet principal du film, abordant des thèmes tels que l'amitié, la surdité aux stéréotypes sociaux et la redécouverte de la vie par les deux personnages."
+    },
+    {
+      "type": "narrative",
+      "question": "Dans quelle région de France se déroule le film Bienvenue chez les Ch'tis ?",
+      "expected_keywords": [
+        "Nord"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Le film Bienvenue chez les Ch'tis se déroule principalement dans le Nord-Pas-de-Calais."
+    },
+    {
+      "type": "narrative",
+      "question": "Quel est le métier du personnage principal du film Bienvenue chez les Ch'tis ?",
+      "expected_keywords": [
+        "facteur"
+      ],
+      "retrieval_score": 0.0,
+      "correctness_score": 0.0,
+      "answer": "Le personnage principal, Philippe Abrams, est directeur d'une agence de La Poste à Salon-de-Provence, dans les Bouches-du-Rhône."
+    },
+    {
+      "type": "narrative",
+      "question": "Dans quel pays se déroule l'histoire du film Astérix et Obélix : Mission Cléopâtre ?",
+      "expected_keywords": [
+        "Égypte"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "L'histoire du film Astérix et Obélix : Mission Cléopâtre se déroule principalement en Égypte, ainsi qu'en Gaule."
+    },
+    {
+      "type": "narrative",
+      "question": "Quels sont les deux personnages principaux du film Les Visiteurs ?",
+      "expected_keywords": [
+        "Godefroy",
+        "Jacquouille"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Les deux personnages principaux du film Les Visiteurs sont Godefroy Amaury de Malefète (interprété par Jean Reno) et Jacquouille la Fripouille (interprété par Christian Clavier)."
+    }
+  ],
+  "summary": {
+    "factuelle": {
+      "n": 5,
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0
+    },
+    "narrative": {
+      "n": 5,
+      "retrieval_score": 0.8,
+      "correctness_score": 0.7
+    },
+    "global": {
+      "n": 10,
+      "retrieval_score": 0.9,
+      "correctness_score": 0.85
+    }
+  }
+}
