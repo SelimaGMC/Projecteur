@@ -2,8 +2,11 @@ from langchain.schema import StrOutputParser
 from langchain.schema.runnable import RunnablePassthrough
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.chat_models import ChatOllama
+from langchain_core.runnables import RunnableLambda
 
 from retriever import VECT_STORE    # Chroma
+
+from router import route
 
 # Modèle de génération : remplace llama3.2 (cf. ameliorations_rag.md).
 # Alternative testée : "llama3.1:8b" -- comparer les deux avec eval_qa.py.
@@ -46,32 +49,42 @@ SYSTEM_PROMPT = (
 )
 
 
-def build_retriever(vectorstore: VECT_STORE):
+def build_retriever(vectorstore: VECT_STORE, question: str = ""):
     """Construit le retriever utilisé pour la génération (cf. eval_qa.py pour son
     évaluation indépendante de la génération)."""
+    if not question:
+        # Fallback sur la stratégie narrative par défaut
+        return vectorstore.as_retriever(
+            search_type="similarity",
+            search_kwargs={"k": RETRIEVAL_K},
+        )
+
+    strategy = route(question)
+    search_kwargs = {"k": strategy.k}
+    if strategy.metadata_filter:
+        search_kwargs["filter"] = strategy.metadata_filter
+
     return vectorstore.as_retriever(
-        search_type="similarity",
-        search_kwargs={"k": RETRIEVAL_K},
+        search_type=strategy.search_type,
+        search_kwargs=search_kwargs,
     )
 
 
 def create_rag_chain(vectorstore: VECT_STORE):
-    retriever = build_retriever(vectorstore)
-
     llm = ChatOllama(model=GENERATION_MODEL, temperature=0, num_ctx=NUM_CTX)
-
     prompt = ChatPromptTemplate.from_messages([
         ("system", SYSTEM_PROMPT),
         ("human", "{question}"),
     ])
 
-    return (
-        {"context": retriever | format_docs, "question": RunnablePassthrough()}
-        | prompt
-        | llm
-        | StrOutputParser()
-    )
+    def retrieve_with_routing(inputs):
+        # inputs peut être une string ou un dict selon comment chain.invoke() est appelé
+        question = inputs if isinstance(inputs, str) else inputs["question"]
+        retriever = build_retriever(vectorstore, question)
+        docs = retriever.invoke(question)
+        return {"context": format_docs(docs), "question": question}
 
+    return RunnableLambda(retrieve_with_routing) | prompt | llm | StrOutputParser()
 
 def format_docs(docs):
     """Concatène les chunks renvoyés par le retriever.
