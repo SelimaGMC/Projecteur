@@ -9,7 +9,7 @@
 \usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
  
 % Fonts
-\usepackage{lmodern}
+
 \renewcommand{\familydefault}{\sfdefault}
  
 % Outline text
@@ -170,7 +170,7 @@
 
     \LARGE
 
-    Membre du groupe (+pourcentages participation):
+    Membres du groupe :
     \\Bouaziz Selima \\
         Lozac'H Mael \\ 
         Marko--Lafon Clothilde \\
@@ -194,181 +194,175 @@
  
     \chapter{Introduction}
  
-    Ce projet consiste à implémenter un RAG sur le sujet de notre choix. Nous avons donc décidé de
-    partir sur le cinéma français. Pour cela, nous avons choisi de nous appuyer sur la liste Wikipedia des
-    plus grands succès français au box office mondial (voir annexe), ainsi que sur les données des pages
-    Wikipedia dédiées à chacun de ces films.
- 
-    Nous avons utilisé le modèle Ollama pour LLM, et suivi le notebook officiel proposé en pièce jointe pour coder notre RAG.
+    Ce projet consiste à implémenter un système RAG (\textit{Retrieval-Augmented Generation}) sur le sujet de notre choix. Nous avons décidé de nous concentrer sur le cinéma français, en nous appuyant sur la liste Wikipedia des plus grands succès français au box-office mondial (voir annexe), ainsi que sur les pages Wikipedia dédiées à chacun de ces films.
+
+    Pour le modèle de langage, nous avons opté pour \textbf{Ollama} afin de pouvoir faire tourner le système entièrement en local, sans dépendance à une API externe. Nous avons suivi le notebook officiel de Gemini (voir annexe) comme base de départ, puis nous avons adapté et enrichi le code pour notre sujet.
+    
  
     \section{Architecture générale}
  
-    Nous avons divisé le code en plusieurs fichiers python afin de faciliter la compréhension, la
-    maintenance ainsi que les tests. Le système suit l'arborescence suivante :
+    Nous avons divisé le code en plusieurs fichiers Python afin de faciliter la compréhension, la maintenance et les tests. Le système suit l'arborescence suivante :
  
     \begin{verbatim}
     [main.py]
- │
- ├──→ [crawler.py] → Récupération des URLs des films
- │
- ├──→ [retriever.py] → Construction de la base vectorielle
- │     │
- │     ├──→ [film_parser.py] → Extraction du contenu des pages Wikipédia
- │     │
- │     ├──→ [database.py] → Stockage SQL des données structurées
-       │
-       └──→ [retriever.py] → Stockage vertorstore des données textuelles
- │
- └──→ [generator.py] → Génération des réponses avec Ollama 3.2
+ |
+ +---> [crawler.py]      -> Récupération des URLs des films
+ |
+ +---> [retriever.py]    -> Construction de la base vectorielle (Chroma)
+ |         |
+ |         +---> [film_parser.py]  -> Extraction du contenu des pages Wikipedia
+ |         |
+ |         +---> [database.py]     -> Stockage SQL des données structurées
+ |
+ +---> [generator.py]    -> Génération des réponses avec Ollama
     \end{verbatim}
     
     \chapter{Description des modules}
  
-    \section{Module principal (main.py) :}
+    \section{Module principal (main.py)}
  
-    Ce fichier est le point d'entrée du programme, c'est lui qui gère l'exécution des 4 autres
-    modules dans l'ordre, correspondants aux étapes suivantes :
+    Ce fichier est le point d'entrée du programme. C'est lui qui gère l'exécution des autres modules dans l'ordre, correspondant aux étapes suivantes :
  
     \begin{itemize}
-        \item Configuration : On initialise la clé API Google Gemini et l'agent utilisateur.
-        \item Crawling : On récupère les URLs des pages Wikipedia de chacun des films via la page
-        initiale qui les liste.
-        \item Indexation : On construit la base de vectorielle à partir de ces pages
-        \item Interaction : Correspond à la boucle de questions/réponses entre le système et l'utilisateur.
-        L'utilisateur pose une question, et le système affiche la réponse générée par Gemini. Cette
-        boucle continue jusqu'à ce que l'utilisateur l'interrompe (Contrôle C).
+        \item \textbf{Configuration :} on initialise les paramètres du système (modèle, agent utilisateur).
+        \item \textbf{Crawling :} on récupère les URLs des pages Wikipedia de chacun des films via la page initiale qui les liste.
+        \item \textbf{Indexation :} on construit la base vectorielle à partir de ces pages. Si elle existe déjà sur le disque, elle est chargée directement pour éviter de tout recalculer.
+        \item \textbf{Interaction :} correspond à la boucle de questions/réponses entre le système et l'utilisateur. L'utilisateur pose une question, et le système affiche la réponse générée par le LLM. Cette boucle continue jusqu'à ce que l'utilisateur l'interrompe (Ctrl+C).
     \end{itemize}
  
-    \section{Module de crawler (crawler.py) :}
+    \section{Module de crawler (crawler.py)}
  
     Ce fichier comporte deux fonctions :
  
     \begin{itemize}
-        \item get\_movie\_titles() : cette première fonction extrait le titre des films depuis la page wikipedia
-        initiale. Pour cela elle utilise la librairie BeautifulSoup pour parser le contenu HTML, puis
-        cible les balises <table class= 'wikitable'> et en récupère la deuxième colonne de chaque
-        ligne, soit le titre d'un film. Elle nettoie ensuite les références de type [1] inutiles avec un
-        regex (r'\textbackslash[.*?\textbackslash]').
-        \item load\_movie\_urls() : cette seconde fonction convertit chaque titre en URL Wikipedia en
-        utilisant l'API Wikipedia que nous avons récupéré. Elle permet de gérer plusieurs cas
-        spécifiques afin d'éviter les bugs ou erreurs : elle respecte les limites de l'API en faisant une
-        pause d'une seconde toutes les 10 requêtes, filtre les pages inexistantes et gère les cas
-        d'homonymie (par exemple le film 'Lucy' et le personnage historique du même nom). Le
-        système essaie d'abord le titre exacte, puis cherche 'titre (film)' si ça échoue.
+        \item \textbf{get\_movie\_titles() :} cette première fonction extrait le titre et l'année de sortie des films depuis la page Wikipedia initiale. Pour cela, elle utilise la librairie BeautifulSoup pour parser le contenu HTML, puis cible les balises \verb|<table class='wikitable'>| et en récupère la deuxième colonne (titre) ainsi que la première colonne (année) de chaque ligne. Elle nettoie ensuite les références de type \texttt{[1]} inutiles avec un regex.
+
+        \item \textbf{load\_movie\_urls() :} cette seconde fonction convertit chaque titre en URL Wikipedia via l'API Wikipedia. Elle gère plusieurs cas spécifiques pour éviter les erreurs. En cas d'homonymie (\texttt{DisambiguationError}), le système tente jusqu'à trois variantes du titre dans l'ordre suivant : d'abord le titre exact, puis \texttt{titre (film)}, et enfin \texttt{titre (film, année)} pour les pages dont le nom inclut l'année de sortie (comme \textit{Jeanne d'Arc (film, 1999)}). La fonction gère également les erreurs réseau en attendant quelques secondes avant de continuer, pour respecter les limites de l'API Wikipedia.
     \end{itemize}
  
-    Nous avons faits plusieurs choix d'implémentations qui permettent le bon fonctionnement de ce
-    module. Par exemple :
- 
-    \begin{itemize}
-        \item L'utilisation d'un set pour les titres permet d'éviter les doublons entre les deux tableaux de
-        films.
-        \item Le auto-suggest = False permet d'éviter les suggestions automatiques de Wikipedia qui
-        pourraient mener à des pages non voulues.
-    \end{itemize}
- 
+    Plusieurs choix d'implémentation permettent le bon fonctionnement de ce module. L'utilisation d'un dictionnaire pour dédoublonner les titres garantit qu'on ne traite pas deux fois le même film, même s'il apparaît dans les deux tableaux de la page. Le paramètre \texttt{auto\_suggest=False} évite les suggestions automatiques de Wikipedia qui pourraient mener à des pages non souhaitées.
+
     \section{Module d'extraction (film\_parser.py)}
  
-    Ce fichier est le cœur de l'extraction des données. C'est lui qui nous permet de rendre notre base de
-    données suffisamment complète pour pouvoir répondre au questions de l'utilisateur.
+    Ce fichier est le c\oe{}ur de l'extraction des données. C'est lui qui permet de rendre la base de connaissances suffisamment complète pour répondre aux questions de l'utilisateur.
  
-    Contrairement au notebook qui automatise ce processus avec UnstructuredURLLoader, nous avons
-    fait un parsing personnalisé au format des pages Wikipedia. Ici on analyse la page de chaque film
-    récupérée avec le module précédent, et deux sorties différentes sont produites en fonction de deux
-    types de données (textuelles et structurées). L'élément renvoyé suit donc un format tuple[str, dict] :
+    Contrairement au notebook qui automatise ce processus avec \texttt{UnstructuredURLLoader}, nous avons fait un parsing personnalisé adapté au format des pages Wikipedia. On analyse la page de chaque film récupérée avec le module précédent, et deux sorties distinctes sont produites selon le type de données. L'élément renvoyé suit le format \texttt{tuple[str, dict]} :
  
     \begin{itemize}
-        \item Le str contient un texte continu qui sert à la recherche vectorielle, contenant l'introduction si
-        elle existe, ainsi que le synopsis, l'accueil et l'analyse.
-        \item Le dictionnaire contient des données structurées à filtrer dans un second temps avec du
-        SQL, contenant la fiche technique, la distribution et les distinctions.
+        \item \textbf{Le str} contient un texte continu destiné à la recherche vectorielle. Il comprend l'introduction si elle existe, ainsi que les sections synopsis, accueil et analyse.
+        \item \textbf{Le dictionnaire} contient des données structurées destinées à être indexées séparément dans Chroma : la fiche technique, la distribution et les distinctions.
     \end{itemize}
  
-    Nous avons choisi de garder ces éléments là afin d'avoir le plus d'informations utiles pour répondre
-    aux questions, sans trop surcharger la base de données.
+    Nous avons fait ce choix de séparation afin d'avoir le maximum d'informations utiles pour répondre aux questions, tout en évitant de noyer des données factuelles précises (comme un réalisateur ou un nombre de César) dans des passages narratifs.
+
+    Ces éléments sont extraits grâce à BeautifulSoup en parcourant les balises \texttt{<h2>} pour organiser le contenu en sections, puis le texte des paragraphes \texttt{<p>} et des listes \texttt{<ul>} ou \texttt{<ol>}. Pour les sections structurées, on stocke temporairement les éléments HTML bruts dans \texttt{sql\_elems} pour les traiter séparément. Les références Wikipedia et les espaces multiples sont nettoyés par la fonction \texttt{clean\_wiki\_refs()}.
+
+    Les distinctions sont organisées par sous-catégories (par exemple \texttt{[César]}, \texttt{[BAFTA]}) grâce aux balises \texttt{h3/h4}, ce qui permet de conserver le contexte de chaque récompense dans une liste plate.
+
+    Ces fonctions sont compatibles avec les deux formats de Wikipedia : l'ancien format avec balises \texttt{<h2>} directes, et le nouveau format depuis 2023 avec des \verb|<div class="mw-heading2">|.
  
-    Ces éléments sont parcourus en utilisant de nouveau la librairie BeatifulSoup afin de récupérer dans
-    les éléments HTML de la page les sections <h2> pour organiser le contenu, puis le texte des
-    paragraphes <p> et des listes <ul> ou <ol>. Pour les sections SQL, on stocke temporairement les
-    éléments bruts dans sql\_elems pour un traitement séparé. Aussi, les références et espaces multiples
-    sont nettoyés grâce à la fonction clean\_wiki\_refs().
+    \section{Module de base de données SQL (database.py)}
  
-    Les distinctions sont organisée par sous-catégories (par exemple César) sous un format avec
-    crochets ([Catégorie]).
- 
-    Ces fonctions suivent également l'évolution de Wikipedia, elles fonctionnent avec l'ancien comme
-    avec le nouveau format (depuis 2023).
- 
-    \section{Module de base de données SQL (database.py) :}
- 
-    Ce fichier gère le stockage des données structurées renvoyées sous forme de dictionnaire dans le
-    module précédent. On traite les données suivantes :
+    Ce fichier gère le stockage des données structurées renvoyées sous forme de dictionnaire par le module d'extraction. On y traite les quatre types de données suivants :
  
     \begin{itemize}
-        \item films : le tableau maître avec les identifiants uniques et les URLs
-        \item fiche\_technique : on les stocke sous formes de paires clé/valeur (par exemple
-        «Réalisateur» : «Duccio Tessari») de manière flexible, chaque film peut avoir des champs
-        différents.
-        \item distribution : la liste des acteurs et leurs rôles
-        \item distinctions : la liste des récompenses, où le contexte est récupéré avec [Catégorie].
+        \item \textbf{films :} le tableau maître contenant les identifiants uniques et les URLs des films.
+        \item \textbf{fiche\_technique :} les métadonnées stockées sous forme de paires clé/valeur (par exemple \texttt{Réalisateur : Luc Besson}). Ce format flexible permet à chaque film d'avoir des champs différents.
+        \item \textbf{distribution :} la liste des acteurs et de leurs rôles.
+        \item \textbf{distinctions :} la liste des récompenses, avec leur catégorie récupérée grâce aux préfixes \texttt{[Catégorie]}.
     \end{itemize}
  
-    On a deux fonctions dans ce module :
+    Le module contient deux fonctions :
  
     \begin{itemize}
-        \item La fonction init\_db(), qui crée les tables si elles n'existent pas déjà, puis retourne une
-        connexion SQLite. L'utilisation de SQLite plutôt par exemple de PostgreSQL est utile car
-        elle ne nécessite aucun serveur.
-        \item La fonction save\_film() qui vérifie que l'URL n'existe pas déjà, puis insère le film et ses
-        données associées, et utilise executemany() pour réaliser un bulk insert efficace (commande
-        SQL servant à charger une grande quantité de données).
+        \item \textbf{init\_db() :} crée les tables si elles n'existent pas déjà, puis retourne une connexion SQLite. Nous avons choisi SQLite car elle ne nécessite aucun serveur et s'intègre nativement en Python.
+        \item \textbf{save\_film() :} vérifie que l'URL n'existe pas déjà avant d'insérer le film et ses données associées. Elle utilise \texttt{executemany()} pour réaliser des insertions groupées efficaces (\textit{bulk insert}).
     \end{itemize}
+
+    Les vérifications d'idempotence (contrainte \texttt{UNIQUE} sur l'URL, \texttt{IF NOT EXISTS} sur les tables) permettent de relancer l'indexation sans risque de doublons ni de recréation de la base.
  
-    Les vérifications d'existence, comme le UNIQUE sur l'attribut url ou le IF NOT EXISTS,
-    permettent de relancer l'indexation en évitant de recréer la base de données ou d'y insérer des
-    doublons.
+    \section{Module de retriever (retriever.py)}
  
-    \section{Module de retriever (retriever.py) :}
- 
-    Ce fichier construit la base vectorielle qui permettra la recherche sémantique. Il suit les étapes
-    suivantes :
+    Ce fichier construit la base vectorielle qui permet la recherche sémantique. Il suit les étapes suivantes :
  
     \begin{itemize}
-        \item D'abord une vérification de persistance. Si Chroma existe déjà, on le charge directement.
-        \item Ensuite l'extraction. Pour chaque URL, on extrait le texte et les données avec
-        film\_parser.py.
-        \item Le découpage : on divise le texte tous les 1000 caractères, avec un chevauchement de 200
-        (données venant du notebook).
-        \item Les embeddings : On convertit ces parties de texte (appelées chunks) en vecteurs
-        numériques en utilisant Gemini.
-        \item Pour finir, le stockage. On sauvegarde les vecteurs et données dans Chroma.
+        \item \textbf{Vérification de persistance :} si Chroma existe déjà sur le disque et n'est pas vide, on le charge directement, évitant ainsi de tout recalculer à chaque lancement.
+        \item \textbf{Extraction :} pour chaque URL, on extrait le texte et les données structurées avec \texttt{film\_parser.py}.
+        \item \textbf{Découpage (\textit{chunking}) :} le texte narratif est découpé en segments de 1000 caractères avec un chevauchement de 200 caractères, pour ne pas couper les informations en plein milieu d'une phrase.
+        \item \textbf{Contextual Retrieval :} chaque chunk est préfixé par \texttt{[Film : <titre>]} avant indexation. Cela permet au LLM d'identifier à quel film se rapporte un extrait même sorti de son contexte, et évite les confusions entre films lors de la génération.
+        \item \textbf{Indexation des données structurées :} la fiche technique, la distribution et les distinctions sont converties en documents textuels séparés et indexées avec des métadonnées de type (\texttt{fiche\_technique}, \texttt{distribution}, \texttt{distinctions}). Ces métadonnées sont ensuite exploitées par le routeur pour filtrer les chunks selon la nature de la question.
+        \item \textbf{Calcul des embeddings et stockage :} les embeddings sont calculés en parallèle par lots de 50 chunks avec 4 threads, puis stockés dans Chroma.
     \end{itemize}
- 
-    Pour gérer les limites API, Gemini impose une limite de 100 requêtes par minute. Pour être sûr la
-    respecter, le système traite les embeddings en lots de 90 et fait une pause d'une minute entre chacun
-    de ces lots. Il évite comme ça les erreurs 429 (too many requests).
- 
-    Un logging d'avancement est afficher toutes les 10 pages pour qu'on puisse vérifier l'avancement..
- 
-    \section{Module de génération (generator.py) :}
- 
-    Ce fichier est le plus important car il définit la châne RAG, avec pour composants :
- 
+
+    Pour les embeddings, nous avons choisi le modèle \textbf{BGE-M3} via Ollama. C'est un modèle multilingue qui offre un meilleur support du français que le modèle \texttt{nomic-embed-text} utilisé initialement, avec une dimension de vecteur de 1024 (contre 768). Ce changement nécessite de reconstruire la base Chroma car les dimensions des vecteurs sont incompatibles.
+
+    \section{Module de génération (generator.py)}
+
+    Ce fichier définit la chaîne RAG et les paramètres du modèle de génération.
+
+    \subsection{Modèle de génération}
+
+    Nous utilisons \textbf{Qwen2.5 7B} (\texttt{qwen2.5:7b}) via Ollama comme modèle de génération. Ce modèle offre un bon équilibre entre qualité de réponse et rapidité d'exécution en local. La fenêtre de contexte est fixée à 8192 tokens, ce qui est suffisant pour accueillir les 8 chunks retournés par le retriever (environ 2000--2500 tokens) ainsi que le prompt système.
+
+    \subsection{Prompt système}
+
+    Le prompt système définit les règles strictes que le modèle doit suivre :
     \begin{itemize}
-        \item Retriever, qui recherche des cinq chunks les plus pertinents dans la base vectorielle
-        \item format\_docs, qui concatène les chunks trouvés en une seule chaîne.
-        \item Prompt, qui intègre le contexte et la question.
-        \item LLM, ici Gemini 2.0 Flash, qui génère la réponse.
-        \item OutputParser, qui extrait le texte de la réponse.
+        \item Répondre uniquement à partir des extraits fournis, sans utiliser de connaissances générales.
+        \item En l'absence d'information, répondre explicitement \textit{«~Je ne dispose pas de cette information dans mes sources.~»}
+        \item Ne pas mélanger les informations de films différents dans une même affirmation, sauf si la question demande explicitement une comparaison.
+        \item Préciser le titre du film concerné lorsque plusieurs films apparaissent dans les extraits.
     \end{itemize}
- 
-    Ce module suit entièrement le notebook, hormis l'adaptation du code pour le cinéma français.
- 
+
+    \subsection{Adaptive RAG}
+
+    Nous avons enrichi le module de génération avec un mécanisme d'\textbf{Adaptive RAG} : plutôt que d'utiliser systématiquement les mêmes paramètres de retrieval, le système adapte sa stratégie de recherche selon la nature de la question posée. Cette logique est implémentée dans un fichier \texttt{router.py} dédié.
+
+    Le routeur classe chaque question dans l'une des trois catégories suivantes à l'aide de règles déterministes basées sur des mots-clés :
+
+    \begin{itemize}
+        \item \textbf{Factuelle} (ex. \textit{«~Qui a réalisé Intouchables~?~»}) : le retrieval se limite à $k=4$ chunks, filtrés sur les types \texttt{fiche\_technique}, \texttt{distribution} et \texttt{distinctions}. On évite ainsi de ramener des passages narratifs inutiles pour une question factuelle.
+        \item \textbf{Narrative} (ex. \textit{«~De quoi parle Les Visiteurs~?~»}) : comportement par défaut avec $k=8$ chunks sur l'ensemble du corpus, sans filtre.
+        \item \textbf{Comparaison} (ex. \textit{«~Compare Intouchables et Bienvenue chez les Ch'tis~»}) : on augmente à $k=14$ chunks avec une recherche par \textit{Maximum Marginal Relevance} (MMR) pour maximiser la diversité des résultats et s'assurer que les deux films sont bien représentés dans le contexte envoyé au LLM.
+    \end{itemize}
+
+    Ce mécanisme s'intègre dans la chaîne LangChain via un \texttt{RunnableLambda} qui intercepte la question avant le retrieval, choisit la stratégie adaptée, puis passe la main au reste de la chaîne sans modifier le prompt ni le modèle.
+
+    \chapter{Évaluation}
+
+    Nous avons mis en place un module d'évaluation indépendant (\texttt{eval\_qa.py}) pour mesurer les performances du système de manière reproductible. Ce module permet de tester le retriever et la chaîne RAG séparément, et de comparer l'impact des différentes améliorations apportées au fil du projet.
+
+    \section{Métrologie}
+
+    L'évaluation du retriever repose sur deux métriques calculées sur un jeu de questions de référence :
+    \begin{itemize}
+        \item \textbf{Précision@k :} proportion de chunks retournés qui sont effectivement pertinents pour la question.
+        \item \textbf{Recall@k :} proportion de chunks pertinents effectivement retrouvés parmi tous les chunks pertinents existants.
+    \end{itemize}
+
+    Pour la qualité des réponses générées, nous utilisons une évaluation automatique : le LLM est invité à noter la réponse produite par rapport à une réponse de référence, selon plusieurs critères (exactitude, complétude, absence d'hallucination).
+
+    \section{Résultats}
+
+    Les améliorations successives apportées au projet (passage de \texttt{nomic-embed-text} à \texttt{bge-m3}, ajout du Contextual Retrieval, implémentation de l'Adaptive RAG) ont été mesurées avec ce module pour valider leur impact sur les performances. Ces résultats sont disponibles dans le fichier \texttt{eval\_results\_run.json}.
+
     \chapter{Conclusion}
- 
+
+    Ce projet nous a permis de construire un système RAG complet, en allant au-delà du notebook de départ. Nous avons notamment implémenté un parsing personnalisé adapté au format des pages Wikipedia, un indexage différencié entre données narratives et données structurées, et un mécanisme d'Adaptive RAG pour adapter dynamiquement la stratégie de retrieval selon la nature de la question.
+
+    On remarque à travers ce projet que la qualité d'un RAG repose en grande partie sur la qualité de l'indexation : un bon découpage, des métadonnées bien choisies et un modèle d'embedding adapté à la langue ont un impact beaucoup plus fort sur les résultats que le choix du modèle de génération lui-même.
+
+    Parmi les pistes d'amélioration envisageables, on peut citer l'ajout d'un hybrid search (BM25 + vecteur) pour mieux retrouver les noms propres, ou encore un mécanisme de query rewriting pour reformuler les questions avant le retrieval.
+
     \chapter{Annexe}
  
-    Le site wikipedia sur lequel ce projet se base :
-    \url{https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ\%C3\%A8s_fran\%C3\%A7ais_au_boxoffice_mondial}
+    Le site Wikipedia sur lequel ce projet se base :
+    
+    \url{https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_fran%C3%A7ais_au_box-office_mondial} \\
+
+
+    Le notebook Gemini : 
+    
+    \url{https://github.com/google-gemini/cookbook/blob/main/examples/langchain/Gemini_LangChain_QA_Chroma_WebLoad.ipynb}
  
 \end{document}

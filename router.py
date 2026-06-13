@@ -11,9 +11,9 @@ class RetrievalStrategy:
     description: str                  # pour le debug / les logs
 
 _FACTUELLE_TRIGGERS = [
-    "qui", "quel acteur", "quelle actrice", "réalisateur", "réalisatrice",
-    "durée", "année", "date", "récompense", "césar", "oscar", "budget",
-    "producteur", "scénariste", "genre", "nationalité", "combien", "quand"
+    "act", "réalis", "casting", "distribution", "écri", "joue", "joua", "joué"
+    "durée", "année", "date", "récompense", "césar", "oscar", "budget", "distinction"
+    "produ", "scénariste", "genre", "nationalité", "combien", "quand", "sorti"
 ]
 
 _COMPARAISON_TRIGGERS = [

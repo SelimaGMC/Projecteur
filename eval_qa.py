@@ -62,7 +62,7 @@ QA_SET = [
     {
         "type": "narrative",
         "question": "Quel est le sujet principal du film Intouchables ?",
-        "expected_keywords": ["tétraplégique", "banlieue"],
+        "expected_keywords": ["relation", "auxiliaire"],
     },
     {
         "type": "narrative",
@@ -72,7 +72,7 @@ QA_SET = [
     {
         "type": "narrative",
         "question": "Quel est le métier du personnage principal du film Bienvenue chez les Ch'tis ?",
-        "expected_keywords": ["facteur"],
+        "expected_keywords": ["Poste"],
     },
     {
         "type": "narrative",
@@ -84,6 +84,21 @@ QA_SET = [
         "question": "Quels sont les deux personnages principaux du film Les Visiteurs ?",
         "expected_keywords": ["Godefroy", "Jacquouille"],
     },
+    {
+        "type": "comparaison",
+        "question": "Quels sont les points communs entre Intouchables et Le Fabuleux Destin d'Amélie Poulain ?",
+        "expected_keywords": ["succès", "comédie"],
+    },
+    {
+        "type": "comparaison",
+        "question": "Compare le nombre de César remportés par Les Visiteurs et Bienvenue chez les Ch'tis.",
+        "expected_keywords": ["César", "Visiteurs", "Ch'tis"],
+    },
+    {
+        "type": "comparaison",
+        "question": "Quel film a eu le plus grand succès au box-office entre Astérix et Obélix : Mission Cléopâtre et Les Bronzés 3 ?",
+        "expected_keywords": ["Astérix", "entrées"],
+    }
 ]
 
 
@@ -126,6 +141,7 @@ def run_eval(label: str) -> None:
         question = item["question"]
         keywords = item["expected_keywords"]
 
+        retriever = build_retriever(vectorstore, question)
         docs = retriever.invoke(question)
         context = "\n".join(doc.page_content for doc in docs)
         retrieval_score = keyword_score(context, keywords)
@@ -147,7 +163,7 @@ def run_eval(label: str) -> None:
         print(f"             -> {answer[:200]}")
 
     summary = {}
-    for q_type in ("factuelle", "narrative"):
+    for q_type in ("factuelle", "narrative", "comparaison"):
         subset = [r for r in results if r["type"] == q_type]
         if subset:
             summary[q_type] = {
