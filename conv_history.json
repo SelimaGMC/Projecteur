@@ -1,0 +1,38 @@
+[
+  {
+    "id": "48488612-89c7-4792-9eef-b530d02f7094",
+    "title": "Synopsis d'Amélie Poulain",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Synopsis d'Amélie Poulain"
+      },
+      {
+        "role": "assistant",
+        "content": "_— Génération interrompue._"
+      }
+    ]
+  },
+  {
+    "id": "3939d47d-fe1e-496a-ab7d-2f7d0739ad5c",
+    "title": "Parle-moi du film Angélique et le Roy",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parle-moi du film Angélique et le Roy"
+      },
+      {
+        "role": "assistant",
+        "content": "Le film \"Angélique et le Roy\" est un film franco-italo-ouest-allemand réalisé par Bernard Borderie, sorti en 1966. Il s'agit d'un film d'aventure et historique avec une durée de 100 minutes.\n\nLa distribution principale comprend Michèle Mercier dans le rôle d'Angélique de Plessis-Bellière, Jean Rochefort comme François Desgrez (et voix du narrateur), Jacques Toja en tant que Louis XIV, Sami Frey pour Zoukim Batchiary Bey et Estella Blain en Madame de Montespan.\n\nLe film suit Angélique après son mariage avec Philippe de Plessis-Bellière. Son mari est blessé lors d'une guerre menée par Louis XIV dans les Flandres. Le roi envoie François Desgrez pour tirer Angélique de ses robes noires et lui confier une mission secrète. Elle doit convaincre l'ambassadeur de Perse de signer un traité avec la France plutôt que les Moscovites.\n\nLe synopsis indique également que Louis XIV prétend à Madame de Montespan qu'Angélique est sa favorite pour sauver son honneur, ce qui provoque une réaction négative de la cour. De plus, le film montre Angélique partageant la couche avec Racoczi en cavale.\n\nLe réalisateur Bernard Borderie a travaillé avec des assistants réalisateurs comme Tony Aboyantz et a produit le film avec Raymond Borderie et Francis Cosne."
+      },
+      {
+        "role": "user",
+        "content": "Quel était le budget pour Angélique et le Roy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Je ne dispose pas de cette information dans mes sources."
+      }
+    ]
+  }
+]

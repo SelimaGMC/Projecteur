@@ -8,11 +8,7 @@ from langchain_community.vectorstores.chroma import Chroma
 VECT_STORE = Chroma
 RETRIEVER_DIR = "./chroma_db"
 
-# ------------- A EXECUTER : ollama pull bge-m3 -------------
 from langchain_community.embeddings import OllamaEmbeddings
-# bge-m3 remplace nomic-embed-text : modèle multilingue avec un meilleur support
-# du français (cf. ameliorations_rag.md). Dimension différente (1024 vs 768) :
-# ./chroma_db doit être reconstruit après ce changement.
 EMBEDDING_MODEL = "bge-m3"
 OLLAMA_EMBEDDING = OllamaEmbeddings(model=EMBEDDING_MODEL)
 

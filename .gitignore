@@ -1,6 +1,7 @@
 venv
 .venv
 secrets.py
+project_secrets.py
 .venv
 
 my_secrets.py
