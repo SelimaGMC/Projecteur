@@ -13,7 +13,7 @@ class RetrievalStrategy:
 _FACTUELLE_TRIGGERS = [
     "act", "réalis", "casting", "distribution", "écri", "joue", "joua", "joué"
     "durée", "année", "date", "récompense", "césar", "oscar", "budget", "distinction"
-    "produ", "scénariste", "genre", "nationalité", "combien", "quand", "sorti"
+    "produ", "scénar", "genre", "nationalité", "combien", "quand", "sorti"
 ]
 
 _COMPARAISON_TRIGGERS = [

@@ -62,7 +62,7 @@ QA_SET = [
     {
         "type": "narrative",
         "question": "Quel est le sujet principal du film Intouchables ?",
-        "expected_keywords": ["relation", "auxiliaire"],
+        "expected_keywords": ["relation", "tétraplégique"],
     },
     {
         "type": "narrative",
@@ -72,7 +72,7 @@ QA_SET = [
     {
         "type": "narrative",
         "question": "Quel est le métier du personnage principal du film Bienvenue chez les Ch'tis ?",
-        "expected_keywords": ["Poste"],
+        "expected_keywords": ["directeur", "Poste"],
     },
     {
         "type": "narrative",
@@ -98,6 +98,11 @@ QA_SET = [
         "type": "comparaison",
         "question": "Quel film a eu le plus grand succès au box-office entre Astérix et Obélix : Mission Cléopâtre et Les Bronzés 3 ?",
         "expected_keywords": ["Astérix", "entrées"],
+    },
+    {
+        "type": "homonymie",
+        "question": "Quand est sorti Jeanne d'Arc ?",
+        "expected_keywords": ["1999"],
     }
 ]
 
@@ -163,7 +168,7 @@ def run_eval(label: str) -> None:
         print(f"             -> {answer[:200]}")
 
     summary = {}
-    for q_type in ("factuelle", "narrative", "comparaison"):
+    for q_type in ("factuelle", "narrative", "comparaison", "homonymie"):
         subset = [r for r in results if r["type"] == q_type]
         if subset:
             summary[q_type] = {

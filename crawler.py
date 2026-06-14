@@ -24,7 +24,7 @@ def get_movie_titles(wiki_url) -> set :
                 title_cell = cols[1]
                 title = title_cell.get_text(strip=True)
 
-                year_cell = cols[0]
+                year_cell = cols[3]
                 year = re.sub(r'\[.*?\]', '', year_cell.get_text(strip=True)).strip()
                 
                 clean_title = re.sub(r'\[.*?\]', '', title).strip() 
@@ -35,7 +35,7 @@ def get_movie_titles(wiki_url) -> set :
         if title not in seen:
             seen[title] = year
     return list(seen.items())
-    return [(t, y) for t, y in list(seen.items()) if t in ["Jeanne d'Arc", "Lucy", "La Sorcière", "L'Animal", "La Chèvre"]]
+    return [(t, y) for t, y in list(seen.items()) if t in ["Jeanne d'Arc", "Lucy", "La Sorcière", "L'Animal", "Fantomas se déchaîne"]]
 
 def load_movies_urls(wiki_url: str, agent: str) -> tuple[list[str], list[str]]:
     import time
@@ -52,28 +52,29 @@ def load_movies_urls(wiki_url: str, agent: str) -> tuple[list[str], list[str]]:
     for title, year in movie_titles:
         i+=1
         try:
+            #On teste d'abord l'url avec "*titre* (film, *année*)"" pour éviter les cas d'homonymie (ex: Jeanne d'Arc, pour éviter de tomber sur la page du personnage historique ou d'une autre oeuvre)
             # auto_suggest=False évite de se retrouver sur une page inattendue si le titre est très court
-            page = wikipedia.page(title, auto_suggest=False)
+            page = wikipedia.page(f"{title} (film, {year})", auto_suggest=False)
             movie_urls.append(page.url)
             available_titles.append(title)
-        except Exception:
-            # En cas d'homonymie (ex: "Lucy"), on essaie d'ajouter " (film)"
+        except wikipedia.exceptions.PageError:
+            # Deuxième cas d'homonymie : on ajoute simplement " (film)" au titre (ex: "L'Animal")
             try:
                 page = wikipedia.page(f"{title} (film)", auto_suggest=False)
                 movie_urls.append(page.url)
                 available_titles.append(title)
             except wikipedia.exceptions.PageError:
-                #En cas d'homonymie de film (ex: Jeanne d'Arc), on essaie d'ajouter " (film, *année de sortie*)"
+                #Pour finir si le titre du film est une page unique, on essaie simplement avec celui-ci (ex: "Fantomas se déchaîne")
                 try:
-                    page = wikipedia.page(f"{title} (film, {year})")
+                    page = wikipedia.page(title, auto_suggest=False)
                     movie_urls.append(page.url)
                     available_titles.append(title)
-                except:
-                    pass # Si on ne trouve toujours pas, on ignore
+                except wikipedia.exceptions.PageError:
+                    print(f"[SKIP] film introuvable : {title} ({year})")
                 
         except wikipedia.exceptions.PageError:
             # La page n'existe pas avec ce titre exact
-            pass
+            print(f"[SKIP] film introuvable : {title} ({year})")
         if (i%10 ==0):
             time.sleep(1)
         #if i >9:

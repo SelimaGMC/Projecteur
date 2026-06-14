@@ -58,7 +58,7 @@
       "question": "Quel est le sujet principal du film Intouchables ?",
       "expected_keywords": [
         "relation",
-        "auxiliaire"
+        "tétraplégique"
       ],
       "retrieval_score": 1.0,
       "correctness_score": 0.5,
@@ -78,6 +78,7 @@
       "type": "narrative",
       "question": "Quel est le métier du personnage principal du film Bienvenue chez les Ch'tis ?",
       "expected_keywords": [
+        "directeur",
         "Poste"
       ],
       "retrieval_score": 1.0,
@@ -138,6 +139,16 @@
       "retrieval_score": 1.0,
       "correctness_score": 1.0,
       "answer": "Astérix et Obélix : Mission Cléopâtre a eu un plus grand succès au box-office français que Les Bronzés 3. En effet, Astérix et Obélix : Mission Cléopâtre a atteint 14 559 509 entrées en France, tandis que Les Bronzés 3 a attiré environ 10 millions de spectateurs."
+    },
+    {
+      "type": "homonymie",
+      "question": "Quand est sorti Jeanne d'Arc ?",
+      "expected_keywords": [
+        "1999"
+      ],
+      "retrieval_score": 0.0,
+      "correctness_score": 0.0,
+      "answer": "Je ne dispose pas de cette information dans mes sources."
     }
   ],
   "summary": {
@@ -156,10 +167,15 @@
       "retrieval_score": 1.0,
       "correctness_score": 0.8888888888888888
     },
+    "homonymie": {
+      "n": 1,
+      "retrieval_score": 0.0,
+      "correctness_score": 0.0
+    },
     "global": {
-      "n": 13,
-      "retrieval_score": 1.0,
-      "correctness_score": 0.9358974358974359
+      "n": 14,
+      "retrieval_score": 0.9285714285714286,
+      "correctness_score": 0.869047619047619
     }
   }
 }
