@@ -289,7 +289,7 @@
         \item \textbf{Vérification de persistance :} si Chroma existe déjà sur le disque et n'est pas vide, on le charge directement, évitant ainsi de tout recalculer à chaque lancement.
         \item \textbf{Extraction :} pour chaque URL, on extrait le texte et les données structurées avec \texttt{film\_parser.py}.
         \item \textbf{Découpage (\textit{chunking}) :} le texte narratif est découpé en segments de 1000 caractères avec un chevauchement de 200 caractères, pour ne pas couper les informations en plein milieu d'une phrase.
-        \item \textbf{Contextual Retrieval :} chaque chunk est préfixé par \texttt{[Film : <titre>]} avant indexation. Cela permet au LLM d'identifier à quel film se rapporte un extrait même sorti de son contexte, et évite les confusions entre films lors de la génération.
+        \item \textbf{Contextual Retrieval :} chaque chunk est préfixé par \texttt{[Film : <titre>]} avant indexation, selon le principe du \textit{Contextual Retrieval}\footnote{\url{https://www.anthropic.com/news/contextual-retrieval}} proposé par Anthropic (2024). Cela permet au LLM d'identifier à quel film se rapporte un extrait même sorti de son contexte, et évite les confusions entre films lors de la génération (voir tableau~\ref{tab:conception}).
         \item \textbf{Indexation des données structurées :} la fiche technique, la distribution et les distinctions sont converties en documents textuels séparés et indexées avec des métadonnées de type (\texttt{fiche\_technique}, \texttt{distribution}, \texttt{distinctions}). Ces métadonnées sont ensuite exploitées par le routeur pour filtrer les chunks selon la nature de la question.
         \item \textbf{Calcul des embeddings et stockage :} les embeddings sont calculés en parallèle par lots de 50 chunks avec 4 threads, puis stockés dans Chroma.
     \end{itemize}
@@ -328,7 +328,54 @@
 
     Ce mécanisme s'intègre dans la chaîne LangChain via un \texttt{RunnableLambda} qui intercepte la question avant le retrieval, choisit la stratégie adaptée, puis passe la main au reste de la chaîne sans modifier le prompt ni le modèle.
 
+    \section{Synthèse des choix de conception}
+    \label{sec:conception}
+
+    Le tableau~\ref{tab:conception} reprend, pour chaque module, le principal obstacle rencontré et le choix d'implémentation retenu pour y répondre.
+
+    \begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+        \hline
+        \textbf{Module} & \textbf{Obstacle rencontré} & \textbf{Choix retenu} \\
+        \hline
+        crawler.py & Homonymie Wikipedia (un titre de film correspond aussi à une personne ou une autre œuvre) & Recherche en cascade : \texttt{Titre (film, année)} $\rightarrow$ \texttt{Titre (film)} $\rightarrow$ \texttt{Titre}, avec \texttt{auto\_suggest=False} \\
+        \hline
+        crawler.py & Limite de débit de l'API Wikipedia & Pause périodique toutes les 10 requêtes et gestion des erreurs réseau \\
+        \hline
+        film\_parser.py & Coexistence de deux formats HTML Wikipedia (\texttt{<h2>} vs \texttt{<div class="mw-heading2">}, ancien/nouveau skin depuis 2023) & Fonctions de détection compatibles avec les deux formats (\texttt{is\_h2}, \texttt{heading\_text}, \texttt{flat\_elems}) \\
+        \hline
+        film\_parser.py & Mélanger texte narratif et données factuelles nuit à la recherche et à la génération & Sortie double : texte continu pour l'indexation vectorielle + dictionnaire structuré (fiche technique, distribution, distinctions) \\
+        \hline
+        database.py & Stocker les données structurées en SQL alourdit le pipeline sans bénéfice pour la recherche sémantique & Abandon de SQLite au profit de documents Chroma typés par métadonnées \\
+        \hline
+        retriever.py & Reconstruire l'index vectoriel à chaque lancement est coûteux & Persistance de la base Chroma sur disque, rechargée si non vide \\
+        \hline
+        retriever.py & \texttt{nomic-embed-text} (768 dimensions) offre un support limité du français & Passage à \texttt{bge-m3} (1024 dimensions, multilingue), avec reconstruction complète de la base \\
+        \hline
+        retriever.py & Un chunk isolé de son film d'origine perd son contexte, causant des confusions entre films & Préfixe \texttt{[Film : <titre>]} ajouté à chaque chunk (Contextual Retrieval) \\
+        \hline
+        retriever.py & Calcul séquentiel des embeddings trop lent (environ 90 films) & Calcul par lots de 50 chunks, parallélisé sur 4 threads \\
+        \hline
+        generator.py & La recherche MMR ($k=20$, \texttt{fetch\_k}=100) ramène trop de bruit et écarte des chunks pertinents au nom de la diversité & Recherche par similarité simple, $k=8$ par défaut \\
+        \hline
+        generator.py & La fenêtre de contexte par défaut d'Ollama tronque silencieusement le prompt & Fixation explicite de \texttt{num\_ctx=8192} \\
+        \hline
+        generator.py & Réponses hallucinées ou mélangeant plusieurs films & Prompt système structuré : règles de fidélité, formule de refus fixe, interdiction de mélanger les films \\
+        \hline
+        router.py & Une stratégie de retrieval unique ne convient pas à tous les types de questions & Adaptive RAG : classification factuelle / narrative / comparaison, avec $k$ et filtre adaptés ($k=4$ filtré, $k=8$, $k=14$ en MMR) \\
+        \hline
+        eval\_qa.py & Aucune évaluation formelle ne permettait de mesurer l'impact des changements & Jeu de questions de référence et scores de précision/rappel (retrieval) et d'exactitude (génération), comparés avant/après \\
+        \hline
+    \end{tabularx}
+    \caption{Synthèse des choix de conception}
+    \label{tab:conception}
+    \end{table}
+
+    Ce parcours du projet montre que la qualité d'un RAG dépend avant tout de l'adéquation entre l'indexation (découpage, métadonnées, embeddings) et la nature des questions posées, bien plus que du choix du modèle de génération lui-même.
+
     \chapter{Évaluation}
+    \label{sec:eval}
 
     Nous avons mis en place un module d'évaluation indépendant (\texttt{eval\_qa.py}) pour mesurer les performances du système de manière reproductible. Ce module permet de tester le retriever et la chaîne RAG séparément, et de comparer l'impact des différentes améliorations apportées au fil du projet.
 
@@ -352,7 +399,7 @@
 
     On remarque à travers ce projet que la qualité d'un RAG repose en grande partie sur la qualité de l'indexation : un bon découpage, des métadonnées bien choisies et un modèle d'embedding adapté à la langue ont un impact beaucoup plus fort sur les résultats que le choix du modèle de génération lui-même.
 
-    Parmi les pistes d'amélioration envisageables, on peut citer l'ajout d'un hybrid search (BM25 + vecteur) pour mieux retrouver les noms propres, ou encore un mécanisme de query rewriting pour reformuler les questions avant le retrieval.
+    Parmi les pistes d'amélioration envisageables, on peut citer l'ajout d'un hybrid search (BM25 + vecteur) pour mieux retrouver les noms propres, un mécanisme de query rewriting pour reformuler les questions avant le retrieval, ou encore un reranking par cross-encoder pour affiner l'ordre des chunks retournés.
 
     \chapter{Annexe}
  
