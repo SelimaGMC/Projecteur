@@ -217,7 +217,7 @@ div[data-testid="stChatMessage"]:has(div[data-testid="chatAvatarIcon-user"]) div
 }
 [data-testid="stChatInput"] textarea {
     background: transparent !important;
-    color: #ececec !important;
+    color: #282828 !important;
     font-size: 0.93rem !important;
     caret-color: #ececec !important;
 }
@@ -293,22 +293,15 @@ def archive_current_conv() -> None:
 @st.cache_resource(show_spinner=False)
 def load_rag_chain():
     try:
-        import project_secrets as cfg
-        os.environ["GOOGLE_API_KEY"] = cfg.GOOGLE_API_KEY
-        agent = cfg.CUSTOM_AGENT
-
-        from crawler import load_movies_urls
-        urls = []
-        if not os.path.exists(RETRIEVER_DIR) or not os.listdir(RETRIEVER_DIR):
-            urls, _ = load_movies_urls(WIKI_BOX_OFFICE_URL, agent=agent)
-
-        from retriever import build_knowledge_base
-        vectorstore = build_knowledge_base(urls)
-        if vectorstore is None:
-            return None
-
-        from generator import create_rag_chain
-        return create_rag_chain(vectorstore)
+        # On importe directement notre moteur depuis main.py
+        from main import initialize_rag
+        
+        chain, movies = initialize_rag()
+        
+        if chain is None:
+            raise RuntimeError("La chaîne RAG n'a pas pu être initialisée.")
+            
+        return chain, movies
 
     except Exception as exc:
         raise RuntimeError(str(exc)) from exc
@@ -333,7 +326,7 @@ def init_session_state():
 # Buttons are wrapped in named <div class="btn-*"> so CSS can
 # target them reliably without fighting Streamlit's inline styles.
 # ─────────────────────────────────────────────────────────────
-def render_left_sidebar(chain):
+def render_left_sidebar(chain, movies):
     with st.sidebar:
 
         # Status badge
@@ -347,6 +340,14 @@ def render_left_sidebar(chain):
         else:
             st.markdown('<span class="status-badge status-loading">◌ Chargement…</span>',
                         unsafe_allow_html=True)
+        
+        if movies:
+            st.markdown("---")
+            with st.sidebar.expander("🎥 Films indexés", expanded=False):
+                for m in sorted(movies):
+                    if st.button(m, key=f"movie_{m}", use_container_width=True):
+                        st.session_state["pending_q"] = f"Parle-moi du film {m}"
+                        st.rerun()
 
         st.markdown("<br>", unsafe_allow_html=True)
 
@@ -477,15 +478,17 @@ def main():
 
     chain   = None
     loading = False
+    movies = []
+
     if not st.session_state.rag_error:
         try:
-            chain = load_rag_chain()
+            chain, movies = load_rag_chain()
             st.session_state.chain_loaded = True
         except RuntimeError as exc:
             st.session_state.rag_error = str(exc)
         loading = not st.session_state.chain_loaded
 
-    render_left_sidebar(chain)
+    render_left_sidebar(chain , movies)
 
     if not st.session_state.messages:
         render_hero(spinning=loading)
