@@ -1,0 +1,181 @@
+{
+  "label": "run",
+  "results": [
+    {
+      "type": "factuelle",
+      "question": "Qui sont les réalisateurs du film Intouchables ?",
+      "expected_keywords": [
+        "Nakache",
+        "Toledano"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Les réalisateurs du film Intouchables sont Éric Toledano et Olivier Nakache."
+    },
+    {
+      "type": "factuelle",
+      "question": "Quel acteur interprète le rôle de Driss dans le film Intouchables ?",
+      "expected_keywords": [
+        "Omar Sy"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Omar Sy interprète le rôle de Bakari « Driss » Bassari, l'auxiliaire de vie dans le film Intouchables."
+    },
+    {
+      "type": "factuelle",
+      "question": "Qui a réalisé le film Bienvenue chez les Ch'tis ?",
+      "expected_keywords": [
+        "Dany Boon"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Dany Boon a réalisé le film Bienvenue chez les Ch'tis."
+    },
+    {
+      "type": "factuelle",
+      "question": "Quels sont les deux acteurs principaux du film La Grande Vadrouille ?",
+      "expected_keywords": [
+        "Bourvil",
+        "Funès"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Les deux acteurs principaux du film La Grande Vadrouille sont Bourvil et Louis de Funès."
+    },
+    {
+      "type": "factuelle",
+      "question": "Quelle actrice interprète Amélie Poulain dans Le Fabuleux Destin d'Amélie Poulain ?",
+      "expected_keywords": [
+        "Audrey Tautou"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Audrey Tautou interprète Amélie Poulain dans Le Fabuleux Destin d'Amélie Poulain."
+    },
+    {
+      "type": "narrative",
+      "question": "Quel est le sujet principal du film Intouchables ?",
+      "expected_keywords": [
+        "relation",
+        "tétraplégique"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 0.5,
+      "answer": "Le film Intouchables explore la relation entre deux hommes issus de milieux sociaux très différents : Philippe, un homme riche et paralysé, et Driss, un jeune homme d'origine sénégalaise sorti récemment de prison. Cette relation inattendue devient le sujet principal du film, traitant de thèmes tels que l'amitié, la tolérance, les préjugés sociaux et la survenue de la compassion entre ces deux personnages."
+    },
+    {
+      "type": "narrative",
+      "question": "Dans quelle région de France se déroule le film Bienvenue chez les Ch'tis ?",
+      "expected_keywords": [
+        "Nord"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Le film Bienvenue chez les Ch'tis se déroule principalement dans le Nord-Pas-de-Calais. Philippe Abrams, directeur d'une agence de La Poste à Salon-de-Provence (Bouches-du-Rhône), est muté pour deux ans dans cette région française."
+    },
+    {
+      "type": "narrative",
+      "question": "Quel est le métier du personnage principal du film Bienvenue chez les Ch'tis ?",
+      "expected_keywords": [
+        "directeur",
+        "Poste"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Le personnage principal, Philippe Abrams, est directeur d'une agence de La Poste à Salon-de-Provence, dans les Bouches-du-Rhône."
+    },
+    {
+      "type": "narrative",
+      "question": "Dans quel pays se déroule l'histoire du film Astérix et Obélix : Mission Cléopâtre ?",
+      "expected_keywords": [
+        "Égypte"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "L'histoire du film Astérix et Obélix : Mission Cléopâtre se déroule principalement en Gaule et en Égypte. Cependant, selon les informations fournies dans l'extrait, le film est un film franco-allemand, donc les scènes ont été tournées dans différents pays de production mentionnés : France et Allemagne."
+    },
+    {
+      "type": "narrative",
+      "question": "Quels sont les deux personnages principaux du film Les Visiteurs ?",
+      "expected_keywords": [
+        "Godefroy",
+        "Jacquouille"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Les deux personnages principaux du film Les Visiteurs sont Godefroy de Montmirail, joué par Jean Reno, et Jacquouille la Fripouille, interprété par Christian Clavier."
+    },
+    {
+      "type": "comparaison",
+      "question": "Quels sont les points communs entre Intouchables et Le Fabuleux Destin d'Amélie Poulain ?",
+      "expected_keywords": [
+        "succès",
+        "comédie"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Les deux films partagent plusieurs points communs :\n\n- Ils sont des comédies dramatiques françaises.\n- Les critiques ont largement salué ces films, avec de nombreux éloges pour leur réalisation et leurs acteurs principaux.\n- Ils ont été très populaires auprès du public français : Intouchables est le deuxième plus gros succès au box-office français derrière Bienvenue chez les Ch'tis, tandis que Le Fabuleux Destin d'Amélie Poulain était déjà le cinquième plus grand succès en nombre d'entrées.\n- Les films ont reçu de nombreuses distinctions : Intouchables a obtenu quatre Césars et cinq nominations aux Oscars, alors que Le Fabuleux Destin d'Amélie Poulain a remporté 59 récompenses sur une sélection de 133.\n- Ils abordent des thèmes liés à la relation entre personnes issues de milieux différents : Intouchables met en scène un riche quadriplégique et un homme d'origine sénégalaise sorti de prison, tandis que Le Fabuleux Destin d'Amélie Poulain présente une parisienne aisée et un homme de Montmartre.\n- Les films ont été critiqués pour leur représentation de la société française : Intouchables a été accusé par certains critiques de racisme latent, tandis que Le Fabuleux Destin d'Amélie Poulain a été critiqué pour sa vision idyllique de Paris qui manque de diversité ethnique."
+    },
+    {
+      "type": "comparaison",
+      "question": "Compare le nombre de César remportés par Les Visiteurs et Bienvenue chez les Ch'tis.",
+      "expected_keywords": [
+        "César",
+        "Visiteurs",
+        "Ch'tis"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 0.6666666666666666,
+      "answer": "Bienvenue chez les Ch'tis a remporté 11 récompenses au total, tandis que Les Visiteurs n'a remporté qu'une seule récompense, celle de la meilleure actrice dans un second rôle pour Valérie Lemercier."
+    },
+    {
+      "type": "comparaison",
+      "question": "Quel film a eu le plus grand succès au box-office entre Astérix et Obélix : Mission Cléopâtre et Les Bronzés 3 ?",
+      "expected_keywords": [
+        "Astérix",
+        "entrées"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Astérix et Obélix : Mission Cléopâtre a eu un meilleur succès au box-office que Les Bronzés 3. Selon les extraits, Mission Cléopâtre a atteint 14 559 509 entrées en France, tandis que Les Bronzés 3 a obtenu 10 millions de spectateurs en France."
+    },
+    {
+      "type": "homonymie",
+      "question": "Quand est sorti Jeanne d'Arc ?",
+      "expected_keywords": [
+        "1999"
+      ],
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0,
+      "answer": "Jeanne d'Arc a été sorti en Belgique, France et Suisse romande le 27 octobre 1999. En États-Unis et Canada, sa sortie a eu lieu le 18 octobre 1999 (avant-première) puis le 12 novembre 1999 (sortie nationale)."
+    }
+  ],
+  "summary": {
+    "factuelle": {
+      "n": 5,
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0
+    },
+    "narrative": {
+      "n": 5,
+      "retrieval_score": 1.0,
+      "correctness_score": 0.9
+    },
+    "comparaison": {
+      "n": 3,
+      "retrieval_score": 1.0,
+      "correctness_score": 0.8888888888888888
+    },
+    "homonymie": {
+      "n": 1,
+      "retrieval_score": 1.0,
+      "correctness_score": 1.0
+    },
+    "global": {
+      "n": 14,
+      "retrieval_score": 1.0,
+      "correctness_score": 0.9404761904761905
+    }
+  }
+}

@@ -183,7 +183,7 @@ def run_eval(label: str) -> None:
     }
 
     output = {"label": label, "results": results, "summary": summary}
-    out_path = f"eval_results_{label}.json"
+    out_path = f"fichiers/eval_results_{label}.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 

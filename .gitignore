@@ -3,6 +3,9 @@ venv
 secrets.py
 project_secrets.py
 .venv
+.python-version
+uv.lock
+pyproject.toml
 
 my_secrets.py
 __pycache__

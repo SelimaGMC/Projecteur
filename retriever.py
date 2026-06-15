@@ -58,7 +58,6 @@ def build_knowledge_base(film_urls: list[str], retriever_dir=RETRIEVER_DIR, embe
     if os.path.exists(retriever_dir) and os.listdir(retriever_dir) :
         db = Chroma(persist_directory=retriever_dir, embedding_function=embedding)
         if db._collection.count() > 0:
-            print("Base vectorielle existante trouvée, chargement...")
             return db
         print("Base vectorielle existante vide, réindexation...")
 

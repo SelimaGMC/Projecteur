@@ -13,7 +13,7 @@ ssl._create_default_https_context = ssl._create_stdlib_context
 
 WIKI_BOX_OFFICE_URL = "https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_fran%C3%A7ais_au_box-office_mondial"
 RETRIEVER_DIR = "./chroma_db"
-MOVIES_CACHE_FILE = "movies_list.json"
+MOVIES_CACHE_FILE = "fichiers/movies_list.json"
 
 def _existing_collection_has_data() -> bool:
     if not os.path.exists(_RETRIEVER_DIR) or not os.listdir(_RETRIEVER_DIR):

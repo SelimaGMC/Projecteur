@@ -164,9 +164,10 @@ footer { visibility: hidden; }
 }
 
 /* ── Pill buttons ── */
-div.pill-btn > div[data-testid="stButton"] > button {
+div.pill-btn > div[data-testid="stButton"] > button,
+div.pill-btn > div[data-testid="stButton"] > button * {
     background: #1a1a1a !important;
-    color: #a0a0a0 !important;
+    color: #282828 !important;
     border: 1px solid #2e2e2e !important;
     border-radius: 999px !important;
     padding: 6px 18px !important;
@@ -176,7 +177,8 @@ div.pill-btn > div[data-testid="stButton"] > button {
     height: auto !important;
     line-height: 1.4 !important;
 }
-div.pill-btn > div[data-testid="stButton"] > button:hover {
+div.pill-btn > div[data-testid="stButton"] > button:hover,
+div.pill-btn > div[data-testid="stButton"] > button:hover * {
     background: #242424 !important;
     border-color: #484848 !important;
     color: #ececec !important;
@@ -242,8 +244,8 @@ WIKI_BOX_OFFICE_URL = (
     "Liste_des_plus_gros_succ%C3%A8s_fran%C3%A7ais_au_box-office_mondial"
 )
 RETRIEVER_DIR  = "./chroma_db"
-LOGO_PATH      = "./logo.png"
-HISTORY_FILE   = "./conv_history.json"
+LOGO_PATH      = "./fichiers/logo.png"
+HISTORY_FILE   = "./fichiers/conv_history.json"
 
 EXAMPLE_QUESTIONS = [
     "Qui a réalisé Intouchables ?",
@@ -420,7 +422,7 @@ def render_hero(spinning: bool = False):
     <div class="hero-wrapper">
         <div class="hero-title-row">
             {img_html}
-            <p class="hero-title" style="font-size:4.5rem;font-family:'Special Elite',serif;color:#ececec;margin:0;line-height:1;">Projecteur</p>
+            <p class="hero-title" style="font-size:4.5rem;font-family:'Special Elite',serif;color:#ececec;margin:0;line-height:1;">Pro'jecteur</p>
         </div>
         <p class="hero-subtitle">Le cinéma français, à la demande.</p>
     </div>

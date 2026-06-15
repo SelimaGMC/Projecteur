@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.9)  9 JUN 2026 22:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.9)  15 JUN 2026 16:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -72,115 +72,127 @@ Package babel Info: Making ? an active character on input line 269.
 \FB@pardim=\dimen157
 \parindentFFN=\dimen158
 \FBfnindent=\dimen159
-))) (c:/texlive/2026/texmf-dist/tex/latex/carlisle/scalefnt.sty) (c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2026/03/07 v6.0 Page Geometry
+))) (c:/texlive/2026/texmf-dist/tex/latex/carlisle/scalefnt.sty) (c:/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+Package: xltabular 2025/02/28 v0.2i `xltabular' package (hv,RN)
+ (c:/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen160
+\ar@mcellbox=\box53
+\extrarowheight=\dimen161
+\NC@list=\toks20
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
+)
+\TX@col@width=\dimen162
+\TX@old@table=\dimen163
+\TX@old@col=\dimen164
+\TX@target=\dimen165
+\TX@delta=\dimen166
+\TX@cols=\count294
+\TX@ftn=\toks21
+) (c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count295
+) (c:/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+ (c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2026-01-28 v4.27 Multi-page Table package (DPC)
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count296
+\LTcapwidth=\dimen167
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@gbox=\box59
+\LT@cols=\count297
+\LT@rows=\count298
+\c@LT@tables=\count299
+\c@LT@chunks=\count300
+\LT@p@ftn=\toks22
+))) (c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
  (c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
-) (c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+\KV@toks@=\toks23
+)
+\caption@tempdima=\dimen168
+\captionmargin=\dimen169
+\caption@leftmargin=\dimen170
+\caption@rightmargin=\dimen171
+\caption@width=\dimen172
+\caption@indent=\dimen173
+\caption@parindent=\dimen174
+\caption@hangindent=\dimen175
+Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
+)
+\c@caption@flags=\count301
+\c@continuedfloat=\count302
+Package caption Info: longtable package is loaded.
+ (c:/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count294
-\Gm@cntv=\count295
-\c@Gm@tempcnt=\count296
-\Gm@bindingoffset=\dimen160
-\Gm@wd@mp=\dimen161
-\Gm@odd@mp=\dimen162
-\Gm@even@mp=\dimen163
-\Gm@layoutwidth=\dimen164
-\Gm@layoutheight=\dimen165
-\Gm@layouthoffset=\dimen166
-\Gm@layoutvoffset=\dimen167
-\Gm@dimlist=\toks21
-) (c:/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty
-Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+\Gm@cnth=\count303
+\Gm@cntv=\count304
+\c@Gm@tempcnt=\count305
+\Gm@bindingoffset=\dimen176
+\Gm@wd@mp=\dimen177
+\Gm@odd@mp=\dimen178
+\Gm@even@mp=\dimen179
+\Gm@layoutwidth=\dimen180
+\Gm@layoutheight=\dimen181
+\Gm@layouthoffset=\dimen182
+\Gm@layoutvoffset=\dimen183
+\Gm@dimlist=\toks24
 ) (c:/texlive/2026/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
-\@fancybox=\box53
-\shadowsize=\dimen168
-\@Sbox=\box54
-\do@VerbBox=\toks22
-\the@fancyput=\toks23
-\this@fancyput=\toks24
-\EndVerbatimTokens=\toks25
+\@fancybox=\box60
+\shadowsize=\dimen184
+\@Sbox=\box61
+\do@VerbBox=\toks25
+\the@fancyput=\toks26
+\this@fancyput=\toks27
+\EndVerbatimTokens=\toks28
 \Verbatim@Outfile=\write3
 \Verbatim@Infile=\read3
 ) (c:/texlive/2026/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2022/07/23 v1.10.1
 Package textpos Info: choosing support for LaTeX3 on input line 60.
-\TP@textbox=\box55
-\TP@holdbox=\box56
-\TPHorizModule=\dimen169
-\TPVertModule=\dimen170
-\TP@margin=\dimen171
-\TP@absmargin=\dimen172
+\TP@textbox=\box62
+\TP@holdbox=\box63
+\TPHorizModule=\dimen185
+\TPVertModule=\dimen186
+\TP@margin=\dimen187
+\TP@absmargin=\dimen188
 
 Grid set 16 x 16 = 38.39343pt x 49.68562pt
-\TPboxrulesize=\dimen173
-\TP@ox=\dimen174
-\TP@oy=\dimen175
-\TP@tbargs=\toks26
+\TPboxrulesize=\dimen189
+\TP@ox=\dimen190
+\TP@oy=\dimen191
+\TP@tbargs=\toks29
 TextBlockOrigin set to 0pt x 0pt
-) (c:/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
- (c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
-Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
-\col@sep=\dimen176
-\ar@mcellbox=\box57
-\extrarowheight=\dimen177
-\NC@list=\toks27
-\extratabsurround=\skip51
-\backup@length=\skip52
-\ar@cellbox=\box58
-)
-\TX@col@width=\dimen178
-\TX@old@table=\dimen179
-\TX@old@col=\dimen180
-\TX@target=\dimen181
-\TX@delta=\dimen182
-\TX@cols=\count297
-\TX@ftn=\toks28
 ) (c:/texlive/2026/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen183
-\c@nlinenum=\count298
-\TeXr@lab=\toks29
+\rotheadsize=\dimen192
+\c@nlinenum=\count306
+\TeXr@lab=\toks30
 ) (c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -210,150 +222,132 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen184
-\Gin@req@width=\dimen185
+\Gin@req@height=\dimen193
+\Gin@req@width=\dimen194
 ) (c:/texlive/2026/texmf-dist/tex/latex/floatrow/floatrow.sty
 Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
- (c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen186
-\captionmargin=\dimen187
-\caption@leftmargin=\dimen188
-\caption@rightmargin=\dimen189
-\caption@width=\dimen190
-\caption@indent=\dimen191
-\caption@parindent=\dimen192
-\caption@hangindent=\dimen193
-Package caption Info: Standard document class detected.
-Package caption Info: french babel package is loaded.
-)
-\c@float@type=\count299
-\float@exts=\toks30
-\float@box=\box59
-\@floatcapt=\box60
+\c@float@type=\count307
+\float@exts=\toks31
+\float@box=\box64
+\@floatcapt=\box65
 Package floatrow Info: Modified float package code loaded on input line 455.
 Package floatrow Info: Modified rotfloat package code loaded on input line 473.
-\FR@everyfloat=\toks31
+\FR@everyfloat=\toks32
 \flrow@foot=\insert252
-\FB@wd=\dimen194
-\FBo@wd=\dimen195
-\FBc@wd=\dimen196
-\FBo@ht=\skip53
-\FBc@ht=\skip54
-\FBf@ht=\skip55
-\FBo@max=\skip56
-\FBc@max=\skip57
-\FBf@max=\skip58
-\c@FBl@b=\count300
-\floatbox@depth=\count301
-\c@FRobj=\count302
-\c@FRsobj=\count303
-\Xhsize=\skip59
-\sXhsize=\skip60
-\Zhsize=\skip61
-\sZhsize=\skip62
-\flrow@rowbox=\box61
-\FR@Zunitlength=\dimen197
-\c@FBcnt=\count304
-\FPOScnt=\count305
-\LTleft=\skip63
-\LTright=\skip64
-\LTleft=\skip65
-\LTright=\skip66
-\flrow@types=\toks32
+\FB@wd=\dimen195
+\FBo@wd=\dimen196
+\FBc@wd=\dimen197
+\FBo@ht=\skip57
+\FBc@ht=\skip58
+\FBf@ht=\skip59
+\FBo@max=\skip60
+\FBc@max=\skip61
+\FBf@max=\skip62
+\c@FBl@b=\count308
+\floatbox@depth=\count309
+\c@FRobj=\count310
+\c@FRsobj=\count311
+\Xhsize=\skip63
+\sXhsize=\skip64
+\Zhsize=\skip65
+\sZhsize=\skip66
+\flrow@rowbox=\box66
+\FR@Zunitlength=\dimen198
+\c@FBcnt=\count312
+\FPOScnt=\count313
+\LTleft=\skip67
+\LTright=\skip68
+\LTleft=\skip69
+\LTright=\skip70
+\flrow@types=\toks33
 ) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2026/05/19 v2.18d AMS math features
-\@mathmargin=\skip67
+\@mathmargin=\skip71
 
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
  (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks33
-\ex@=\dimen198
+\@emptytoks=\toks34
+\ex@=\dimen199
 )) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen199
+\pmbraise@=\dimen256
 ) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count306
+\inf@bad=\count314
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count307
-\leftroot@=\count308
+\uproot@=\count315
+\leftroot@=\count316
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count309
-\DOTSCASE@=\count310
+\classnum@=\count317
+\DOTSCASE@=\count318
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box62
-\strutbox@=\box63
+\Mathstrutbox@=\box67
+\strutbox@=\box68
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen256
+\big@size=\dimen257
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count311
+\macc@depth=\count319
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count312
+\c@MaxMatrixCols=\count320
 \dotsspace@=\muskip17
-\c@parentequation=\count313
-\dspbrk@lvl=\count314
-\tag@help=\toks34
-\row@=\count315
-\column@=\count316
-\maxfields@=\count317
-\andhelp@=\toks35
-\eqnshift@=\dimen257
-\alignsep@=\dimen258
-\tagshift@=\dimen259
-\tagwidth@=\dimen260
-\totwidth@=\dimen261
-\lineht@=\dimen262
-\@envbody=\toks36
-\multlinegap=\skip68
-\multlinetaggap=\skip69
-\mathdisplay@stack=\toks37
+\c@parentequation=\count321
+\dspbrk@lvl=\count322
+\tag@help=\toks35
+\row@=\count323
+\column@=\count324
+\maxfields@=\count325
+\andhelp@=\toks36
+\eqnshift@=\dimen258
+\alignsep@=\dimen259
+\tagshift@=\dimen260
+\tagwidth@=\dimen261
+\totwidth@=\dimen262
+\lineht@=\dimen263
+\@envbody=\toks37
+\multlinegap=\skip72
+\multlinetaggap=\skip73
+\mathdisplay@stack=\toks38
 LaTeX Info: Redefining \[ on input line 2965.
 LaTeX Info: Redefining \] on input line 2966.
 ) (c:/texlive/2026/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count318
-\mult@box=\box64
-\multicol@leftmargin=\dimen263
-\c@unbalance=\count319
-\c@collectmore=\count320
-\doublecol@number=\count321
-\multicoltolerance=\count322
-\multicolpretolerance=\count323
-\full@width=\dimen264
-\page@free=\dimen265
-\premulticols=\dimen266
-\postmulticols=\dimen267
-\multicolsep=\skip70
-\multicolbaselineskip=\skip71
-\partial@page=\box65
-\last@line=\box66
-\mc@boxedresult=\box67
-\maxbalancingoverflow=\dimen268
-\mult@rightbox=\box68
-\mult@grightbox=\box69
-\mult@firstbox=\box70
-\mult@gfirstbox=\box71
-\@tempa=\box72
-\@tempa=\box73
-\@tempa=\box74
-\@tempa=\box75
-\@tempa=\box76
+\c@tracingmulticols=\count326
+\mult@box=\box69
+\multicol@leftmargin=\dimen264
+\c@unbalance=\count327
+\c@collectmore=\count328
+\doublecol@number=\count329
+\multicoltolerance=\count330
+\multicolpretolerance=\count331
+\full@width=\dimen265
+\page@free=\dimen266
+\premulticols=\dimen267
+\postmulticols=\dimen268
+\multicolsep=\skip74
+\multicolbaselineskip=\skip75
+\partial@page=\box70
+\last@line=\box71
+\mc@boxedresult=\box72
+\maxbalancingoverflow=\dimen269
+\mult@rightbox=\box73
+\mult@grightbox=\box74
+\mult@firstbox=\box75
+\mult@gfirstbox=\box76
 \@tempa=\box77
 \@tempa=\box78
 \@tempa=\box79
@@ -385,52 +379,57 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box105
 \@tempa=\box106
 \@tempa=\box107
-\c@minrows=\count324
-\c@columnbadness=\count325
-\c@finalcolumnbadness=\count326
-\last@try=\dimen269
-\multicolovershoot=\dimen270
-\multicolundershoot=\dimen271
-\mult@nat@firstbox=\box108
-\colbreak@box=\box109
-\mc@col@check@num=\count327
-\g__mc_curr_col_int=\count328
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\c@minrows=\count332
+\c@columnbadness=\count333
+\c@finalcolumnbadness=\count334
+\last@try=\dimen270
+\multicolovershoot=\dimen271
+\multicolundershoot=\dimen272
+\mult@nat@firstbox=\box113
+\colbreak@box=\box114
+\mc@col@check@num=\count335
+\g__mc_curr_col_int=\count336
 ) (c:/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip72
-\f@nch@offset@elh=\skip73
-\f@nch@offset@erh=\skip74
-\f@nch@offset@olh=\skip75
-\f@nch@offset@orh=\skip76
-\f@nch@offset@elf=\skip77
-\f@nch@offset@erf=\skip78
-\f@nch@offset@olf=\skip79
-\f@nch@offset@orf=\skip80
-\f@nch@height=\skip81
-\f@nch@footalignment=\skip82
-\f@nch@widthL=\skip83
-\f@nch@widthC=\skip84
-\f@nch@widthR=\skip85
-\@temptokenb=\toks38
+\f@nch@headwidth=\skip76
+\f@nch@offset@elh=\skip77
+\f@nch@offset@erh=\skip78
+\f@nch@offset@olh=\skip79
+\f@nch@offset@orh=\skip80
+\f@nch@offset@elf=\skip81
+\f@nch@offset@erf=\skip82
+\f@nch@offset@olf=\skip83
+\f@nch@offset@orf=\skip84
+\f@nch@height=\skip85
+\f@nch@footalignment=\skip86
+\f@nch@widthL=\skip87
+\f@nch@widthC=\skip88
+\f@nch@widthR=\skip89
+\@temptokenb=\toks39
 ) (c:/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box110
-\beforetitleunit=\skip86
-\aftertitleunit=\skip87
-\ttl@plus=\dimen272
-\ttl@minus=\dimen273
-\ttl@toksa=\toks39
-\titlewidth=\dimen274
-\titlewidthlast=\dimen275
-\titlewidthfirst=\dimen276
+\ttl@box=\box115
+\beforetitleunit=\skip90
+\aftertitleunit=\skip91
+\ttl@plus=\dimen273
+\ttl@minus=\dimen274
+\ttl@toksa=\toks40
+\titlewidth=\dimen275
+\titlewidthlast=\dimen276
+\titlewidthfirst=\dimen277
 ) (c:/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2026/05/28 version 6.10.0 text color boxes
  (c:/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks40
-\pgfutil@tempdima=\dimen277
-\pgfutil@tempdimb=\dimen278
+\pgfutil@everybye=\toks41
+\pgfutil@tempdima=\dimen278
+\pgfutil@tempdimb=\dimen279
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box111
+\pgfutil@abb=\box116
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
@@ -438,31 +437,31 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
  (c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks41
-\pgfkeys@temptoks=\toks42
+\pgfkeys@pathtoks=\toks42
+\pgfkeys@temptoks=\toks43
  (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks43
+\pgfkeys@tmptoks=\toks44
 ))
-\pgf@x=\dimen279
-\pgf@y=\dimen280
-\pgf@xa=\dimen281
-\pgf@ya=\dimen282
-\pgf@xb=\dimen283
-\pgf@yb=\dimen284
-\pgf@xc=\dimen285
-\pgf@yc=\dimen286
-\pgf@xd=\dimen287
-\pgf@yd=\dimen288
+\pgf@x=\dimen280
+\pgf@y=\dimen281
+\pgf@xa=\dimen282
+\pgf@ya=\dimen283
+\pgf@xb=\dimen284
+\pgf@yb=\dimen285
+\pgf@xc=\dimen286
+\pgf@yc=\dimen287
+\pgf@xd=\dimen288
+\pgf@yd=\dimen289
 \w@pgf@writea=\write4
 \r@pgf@reada=\read4
-\c@pgf@counta=\count329
-\c@pgf@countb=\count330
-\c@pgf@countc=\count331
-\c@pgf@countd=\count332
-\t@pgf@toka=\toks44
-\t@pgf@tokb=\toks45
-\t@pgf@tokc=\toks46
-\pgf@sys@id@count=\count333
+\c@pgf@counta=\count337
+\c@pgf@countb=\count338
+\c@pgf@countc=\count339
+\c@pgf@countd=\count340
+\t@pgf@toka=\toks45
+\t@pgf@tokb=\toks46
+\t@pgf@tokc=\toks47
+\pgf@sys@id@count=\count341
  (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -473,59 +472,59 @@ File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 ))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count334
-\pgfsyssoftpath@bigbuffer@items=\count335
+\pgfsyssoftpath@smallbuffer@items=\count342
+\pgfsyssoftpath@bigbuffer@items=\count343
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
  (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen289
-\pgfmath@count=\count336
-\pgfmath@box=\box112
-\pgfmath@toks=\toks47
-\pgfmath@stack@operand=\toks48
-\pgfmath@stack@operation=\toks49
+\pgfmath@dimen=\dimen290
+\pgfmath@count=\count344
+\pgfmath@box=\box117
+\pgfmath@toks=\toks48
+\pgfmath@stack@operand=\toks49
+\pgfmath@stack@operation=\toks50
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count337
+\c@pgfmathroundto@lastzeros=\count345
 )) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen290
-\pgf@picmaxx=\dimen291
-\pgf@picminy=\dimen292
-\pgf@picmaxy=\dimen293
-\pgf@pathminx=\dimen294
-\pgf@pathmaxx=\dimen295
-\pgf@pathminy=\dimen296
-\pgf@pathmaxy=\dimen297
-\pgf@xx=\dimen298
-\pgf@xy=\dimen299
-\pgf@yx=\dimen300
-\pgf@yy=\dimen301
-\pgf@zx=\dimen302
-\pgf@zy=\dimen303
+\pgf@picminx=\dimen291
+\pgf@picmaxx=\dimen292
+\pgf@picminy=\dimen293
+\pgf@picmaxy=\dimen294
+\pgf@pathminx=\dimen295
+\pgf@pathmaxx=\dimen296
+\pgf@pathminy=\dimen297
+\pgf@pathmaxy=\dimen298
+\pgf@xx=\dimen299
+\pgf@xy=\dimen300
+\pgf@yx=\dimen301
+\pgf@yy=\dimen302
+\pgf@zx=\dimen303
+\pgf@zy=\dimen304
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen304
-\pgf@path@lasty=\dimen305
+\pgf@path@lastx=\dimen305
+\pgf@path@lasty=\dimen306
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen306
-\pgf@shorten@start@additional=\dimen307
+\pgf@shorten@end@additional=\dimen307
+\pgf@shorten@start@additional=\dimen308
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box113
-\pgf@hbox=\box114
-\pgf@layerbox@main=\box115
-\pgf@picture@serial@count=\count338
+\pgfpic=\box118
+\pgf@hbox=\box119
+\pgf@layerbox@main=\box120
+\pgf@picture@serial@count=\count346
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen308
+\pgflinewidth=\dimen309
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen309
-\pgf@pt@y=\dimen310
-\pgf@pt@temp=\dimen311
+\pgf@pt@x=\dimen310
+\pgf@pt@y=\dimen311
+\pgf@pt@temp=\dimen312
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -534,17 +533,17 @@ File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen312
+\pgfarrowsep=\dimen313
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen313
-\pgf@sys@shading@range@num=\count339
-\pgf@shadingcount=\count340
+\pgf@max=\dimen314
+\pgf@sys@shading@range@num=\count347
+\pgf@shadingcount=\count348
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box116
+\pgfexternal@startupbox=\box121
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
@@ -555,79 +554,76 @@ File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box117
+\pgfnodeparttextbox=\box122
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen314
-\pgf@nodesepend=\dimen315
+\pgf@nodesepstart=\dimen315
+\pgf@nodesepend=\dimen316
 ) (c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 )) (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen316
-\pgffor@skip=\dimen317
-\pgffor@stack=\toks50
-\pgffor@toks=\toks51
+\pgffor@iter=\dimen317
+\pgffor@skip=\dimen318
+\pgffor@stack=\toks51
+\pgffor@toks=\toks52
 )) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count341
-\pgfplotmarksize=\dimen318
+\pgf@plot@mark@count=\count349
+\pgfplotmarksize=\dimen319
 )
-\tikz@lastx=\dimen319
-\tikz@lasty=\dimen320
-\tikz@lastxsaved=\dimen321
-\tikz@lastysaved=\dimen322
-\tikz@lastmovetox=\dimen323
-\tikz@lastmovetoy=\dimen324
-\tikzleveldistance=\dimen325
-\tikzsiblingdistance=\dimen326
-\tikz@figbox=\box118
-\tikz@figbox@bg=\box119
-\tikz@tempbox=\box120
-\tikz@tempbox@bg=\box121
-\tikztreelevel=\count342
-\tikznumberofchildren=\count343
-\tikznumberofcurrentchild=\count344
-\tikz@fig@count=\count345
+\tikz@lastx=\dimen320
+\tikz@lasty=\dimen321
+\tikz@lastxsaved=\dimen322
+\tikz@lastysaved=\dimen323
+\tikz@lastmovetox=\dimen324
+\tikz@lastmovetoy=\dimen325
+\tikzleveldistance=\dimen326
+\tikzsiblingdistance=\dimen327
+\tikz@figbox=\box123
+\tikz@figbox@bg=\box124
+\tikz@tempbox=\box125
+\tikz@tempbox@bg=\box126
+\tikztreelevel=\count350
+\tikznumberofchildren=\count351
+\tikznumberofcurrentchild=\count352
+\tikz@fig@count=\count353
  (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count346
-\pgfmatrixcurrentcolumn=\count347
-\pgf@matrix@numberofcolumns=\count348
+\pgfmatrixcurrentrow=\count354
+\pgfmatrixcurrentcolumn=\count355
+\pgf@matrix@numberofcolumns=\count356
 )
-\tikz@expandcount=\count349
+\tikz@expandcount=\count357
  (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (c:/texlive/2026/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks52
-\verbatim@line=\toks53
+\every@verbatim=\toks53
+\verbatim@line=\toks54
 \verbatim@in@stream=\read5
 ) (c:/texlive/2026/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
  (c:/texlive/2026/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)) (c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count350
-)
-\tcb@titlebox=\box122
-\tcb@upperbox=\box123
-\tcb@lowerbox=\box124
-\tcb@phantombox=\box125
-\c@tcbbreakpart=\count351
-\c@tcblayer=\count352
-\c@tcolorbox@number=\count353
-\l__tcobox_tmpa_box=\box126
-\l__tcobox_tmpa_dim=\dimen327
-\tcb@temp=\box127
-\tcb@temp=\box128
-\tcb@temp=\box129
-\tcb@temp=\box130
+))
+\tcb@titlebox=\box127
+\tcb@upperbox=\box128
+\tcb@lowerbox=\box129
+\tcb@phantombox=\box130
+\c@tcbbreakpart=\count358
+\c@tcblayer=\count359
+\c@tcolorbox@number=\count360
+\l__tcobox_tmpa_box=\box131
+\l__tcobox_tmpa_dim=\dimen328
+\tcb@temp=\box132
+\tcb@temp=\box133
+\tcb@temp=\box134
+\tcb@temp=\box135
 ) (c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
  (c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
@@ -657,13 +653,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count354
+\c@section@level=\count361
 ) (c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen328
-\Hy@linkcounter=\count355
-\Hy@pagecounter=\count356
+\@linkdim=\dimen329
+\Hy@linkcounter=\count362
+\Hy@pagecounter=\count363
  (c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -671,7 +667,7 @@ Now handling font encoding PD1 ...
 ) (c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count357
+\Hy@SavedSpaceFactor=\count364
  (c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -685,21 +681,21 @@ Package hyperref Info: Plain pages OFF on input line 4214.
 Package hyperref Info: Backreferencing OFF on input line 4219.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4466.
-\c@Hy@tempcnt=\count358
+\c@Hy@tempcnt=\count365
  (c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4805.
-\XeTeXLinkMargin=\dimen329
+\XeTeXLinkMargin=\dimen330
  (c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count359
-\Field@Width=\dimen330
-\Fld@charsize=\dimen331
+\Fld@menulength=\count366
+\Field@Width=\dimen331
+\Fld@charsize=\dimen332
 Package hyperref Info: Hyper figures OFF on input line 6091.
 Package hyperref Info: Link nesting OFF on input line 6096.
 Package hyperref Info: Hyper index ON on input line 6099.
@@ -707,15 +703,15 @@ Package hyperref Info: backreferencing OFF on input line 6106.
 Package hyperref Info: Link coloring OFF on input line 6111.
 Package hyperref Info: Link coloring with OCG OFF on input line 6116.
 Package hyperref Info: PDF/A mode OFF on input line 6121.
-\Hy@abspage=\count360
-\c@Item=\count361
-\c@Hfootnote=\count362
+\Hy@abspage=\count367
+\c@Item=\count368
+\c@Hfootnote=\count369
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
-\Fld@listcount=\count363
-\c@bookmark@seq@number=\count364
+\Fld@listcount=\count370
+\c@bookmark@seq@number=\count371
  (c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -723,25 +719,25 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
-\Hy@SectionHShift=\skip88
+\Hy@SectionHShift=\skip92
 ) (c:/texlive/2026/texmf-dist/tex/latex/etoc/etoc.sty
 Package: etoc 2026/05/04 v1.2e Completely customisable TOCs (JFB)
-\Etoc@toctoks=\toks54
-\c@etoc@tocid=\count365
-\etoc@framed@titlebox=\box131
-\etoc@framed@contentsbox=\box132
+\Etoc@toctoks=\toks55
+\c@etoc@tocid=\count372
+\etoc@framed@titlebox=\box136
+\etoc@framed@contentsbox=\box137
 ) (c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.sty (c:/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2026-05-26 L3 programming layer (loader) 
  (c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count366
+\l__color_backend_stack_int=\count373
 ))
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count367
-\l__lipsum_a_int=\count368
-\l__lipsum_b_int=\count369
+\g__lipsum_par_int=\count374
+\l__lipsum_a_int=\count375
+\l__lipsum_b_int=\count376
  (c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2026/04/21 v5.1 (NLCT)
  (c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
@@ -749,16 +745,16 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 ) (c:/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
  (c:/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks55
-\XKV@tempa@toks=\toks56
-\XKV@tempb@toks=\toks57
+\XKV@toks=\toks56
+\XKV@tempa@toks=\toks57
+\XKV@tempb@toks=\toks58
 )
-\XKV@depth=\count370
+\XKV@depth=\count377
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (c:/texlive/2026/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
-\@glsmfirst=\toks58
-\@glsmrest=\toks59
+\@glsmfirst=\toks59
+\@glsmrest=\toks60
 ) (c:/texlive/2026/texmf-dist/tex/latex/xfor/xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
 ) (c:/texlive/2026/texmf-dist/tex/latex/tracklang/tracklang.sty
@@ -772,89 +768,70 @@ Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 File: glossaries-french.ldf 2016/12/12 v1.1
 ) (c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-base.sty
 Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
-\l__datatool_tmpa_int=\count371
-\l__datatool_tmpb_int=\count372
-\l__datatool_tmpc_int=\count373
-\l__datatool_tmpd_int=\count374
-\l__datatool_count_int=\count375
-\l__datatool_tmp_datatype_int=\count376
-\l__datatool_tmpa_dim=\dimen332
-\l__datatool_tmpb_dim=\dimen333
+\l__datatool_tmpa_int=\count378
+\l__datatool_tmpb_int=\count379
+\l__datatool_tmpc_int=\count380
+\l__datatool_tmpd_int=\count381
+\l__datatool_count_int=\count382
+\l__datatool_tmp_datatype_int=\count383
+\l__datatool_tmpa_dim=\dimen333
+\l__datatool_tmpb_dim=\dimen334
  (c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-l3fp.def
 File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
 )
-\@dtl@toks=\toks60
-\@dtl@tmpcount=\count377
-\dtl@tmplength=\skip89
-\l__datatool_measure_box=\box133
-\dtl@sortresult=\count378
+\@dtl@toks=\toks61
+\@dtl@tmpcount=\count384
+\dtl@tmplength=\skip93
+\l__datatool_measure_box=\box138
+\dtl@sortresult=\count385
  (c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
 File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
 )
-\@dtl@datatype=\count379
-\c_datatool_unknown_int=\count380
-\l__datatool_year_int=\count381
-\l__datatool_month_int=\count382
-\l__datatool_day_int=\count383
-\l__datatool_hour_int=\count384
-\l__datatool_minute_int=\count385
-\l__datatool_second_int=\count386
-\l__datatool_tzhour_int=\count387
-\l__datatool_tzminute_int=\count388
-\l__datatool_julian_int=\count389
-\l__datatool_local_julian_int=\count390
-\l__datatool_prefix_int=\count391
-\l__datatool_suffix_int=\count392
-\@dtl@foreach@level=\count393
+\@dtl@datatype=\count386
+\c_datatool_unknown_int=\count387
+\l__datatool_year_int=\count388
+\l__datatool_month_int=\count389
+\l__datatool_day_int=\count390
+\l__datatool_hour_int=\count391
+\l__datatool_minute_int=\count392
+\l__datatool_second_int=\count393
+\l__datatool_tzhour_int=\count394
+\l__datatool_tzminute_int=\count395
+\l__datatool_julian_int=\count396
+\l__datatool_local_julian_int=\count397
+\l__datatool_prefix_int=\count398
+\l__datatool_suffix_int=\count399
+\@dtl@foreach@level=\count400
 
 
 Package tracklang Warning: No `datatool' support for dialect `french'  on input line 9924.
 
-\dtl@codeA=\count394
-\dtl@codeB=\count395
+\dtl@codeA=\count401
+\dtl@codeB=\count402
 )
-\gls@level=\count396
-\@gls@tmpb=\toks61
-\gls@tmplen=\skip90
-\l__glossaries_tmpa_dim=\dimen334
-\l__glossaries_tmpb_dim=\dimen335
-\glskeylisttok=\toks62
-\glslabeltok=\toks63
-\glsshorttok=\toks64
-\glslongtok=\toks65
+\gls@level=\count403
+\@gls@tmpb=\toks62
+\gls@tmplen=\skip94
+\l__glossaries_tmpa_dim=\dimen335
+\l__glossaries_tmpb_dim=\dimen336
+\glskeylisttok=\toks63
+\glslabeltok=\toks64
+\glsshorttok=\toks65
+\glslongtok=\toks66
  (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
 Package: glossary-hypernav 2026/04/21 v5.1 (NLCT)
 ) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 Package: glossary-list 2026/04/21 v5.1 (NLCT)
-\glslistdottedwidth=\skip91
+\glslistdottedwidth=\skip95
 ) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
 Package: glossary-long 2026/04/21 v5.1 (NLCT)
- (c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2026-01-28 v4.27 Multi-page Table package (DPC)
-\LTleft=\skip92
-\LTright=\skip93
-\LTpre=\skip94
-\LTpost=\skip95
-\LTchunksize=\count397
-\LTcapwidth=\dimen336
-\LT@head=\box134
-\LT@firsthead=\box135
-\LT@foot=\box136
-\LT@lastfoot=\box137
-\LT@gbox=\box138
-\LT@cols=\count398
-\LT@rows=\count399
-\c@LT@tables=\count400
-\c@LT@chunks=\count401
-\LT@p@ftn=\toks66
-)
 \glsdescwidth=\skip96
 \glspagelistwidth=\skip97
 ) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 Package: glossary-super 2026/04/21 v5.1 (NLCT)
  (c:/texlive/2026/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2025/06/26 v4.2d the supertabular environment
-\c@tracingst=\count402
+\c@tracingst=\count404
 \ST@wd=\dimen337
 \ST@rightskip=\skip98
 \ST@leftskip=\skip99
@@ -871,7 +848,7 @@ Package: supertabular 2025/06/26 v4.2d the supertabular environment
 \ST@pbox=\box139
 )) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2026/04/21 v5.1 (NLCT)
-\l__glossaries_tree_max_known_level_int=\count403
+\l__glossaries_tree_max_known_level_int=\count405
 \l__glossaries_tree_offset_dim=\dimen347
 \l__glossaries_tree_namewidth_dim=\dimen348
 \l__glossaries_tree_symbolwidth_dim=\dimen349
@@ -881,42 +858,48 @@ Package: glossary-tree 2026/04/21 v5.1 (NLCT)
 \l__glossaries_tree_symbolwidth_padding_dim=\dimen353
 \l__glossaries_tree_namesymbolwidth_dim=\dimen354
 \l__glossaries_tree_namesymbolwidth_padding_dim=\dimen355
-\l__glossaries_tree_level_int=\count404
+\l__glossaries_tree_level_int=\count406
 \glstreeindent=\skip101
 ))
 \glswrite=\write5
 \glo@main@file=\write6
 \openout6 = `rapport.glo'.
 
-Package glossaries Info: Writing glossary file rapport.glo on input line 86.
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 135.
- (c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+Package glossaries Info: Writing glossary file rapport.glo on input line 88.
+ (./rapport.aux
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 20.
 )
-No file rapport.aux.
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 135.
-LaTeX Info: Redefining \degres on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Info: Redefining \degres on input line 137.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: Fixing longtable code of `floatrow' package.
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -925,14 +908,14 @@ LaTeX Info: Redefining \degres on input line 135.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* h-part:(L,W,R)=(64.01869pt, 486.25761pt, 64.01869pt)
 * v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=443.57848pt
+* \textwidth=486.25761pt
 * \textheight=681.15898pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
+* \oddsidemargin=-8.2513pt
+* \evensidemargin=-8.2513pt
 * \topmargin=-52.36449pt
 * \headheight=27.0pt
 * \headsep=25.0pt
@@ -953,37 +936,34 @@ LaTeX Info: Redefining \degres on input line 135.
 
 (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count405
+\scratchcounter=\count407
 \scratchdimen=\dimen356
 \scratchbox=\box140
-\nofMPsegments=\count406
-\nofMParguments=\count407
+\nofMPsegments=\count408
+\nofMParguments=\count409
 \everyMPshowfont=\toks67
-\MPscratchCnt=\count408
+\MPscratchCnt=\count410
 \MPscratchDim=\dimen357
-\MPnumerator=\count409
-\makeMPintoPDFobject=\count410
+\MPnumerator=\count411
+\makeMPintoPDFobject=\count412
 \everyMPtoPDFconversion=\toks68
 ) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
- (c:/texlive/2026/texmf-dist/tex/latex/floatrow/fr-longtable.sty
+)) (c:/texlive/2026/texmf-dist/tex/latex/floatrow/fr-longtable.sty
 Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 \flrow@LT@lasthead=\box141
 \flrow@LT@prelastfoot=\box142
-\c@FBLTpage=\count411
+\c@FBLTpage=\count413
 )
-Package hyperref Info: Link coloring OFF on input line 135.
+Package hyperref Info: Link coloring OFF on input line 137.
+ (./rapport.out) (./rapport.out)
 \@outlinefile=\write7
 \openout7 = `rapport.out'.
 
-
-No file rapport.toc.
+\Etoc@tf=\read6
 Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:42:37
 (epstopdf)                    size: 276816 bytes
@@ -991,40 +971,18 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 144.
+(epstopdf)             \includegraphics on input line 146.
 Package epstopdf Info: Output file is already uptodate.
-<assets/UTC-eps-converted-to.pdf, id=7, 88.33pt x 68.255pt>
+<assets/UTC-eps-converted-to.pdf, id=87, 88.33pt x 68.255pt>
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 144.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 146.
 (pdftex.def)             Requested size: 128.88254pt x 99.58464pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 145.
-(c:/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 145.
- (c:/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 145.
- (c:/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 145.
- (c:/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 145.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 145.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 145.
  [1
 
 \openout5 = `rapport.ist'.
 
-{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./assets/UTC-eps-converted-to.pdf>]
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./assets/UTC-eps-converted-to.pdf>]
 \tf@toc=\write8
 \openout8 = `rapport.toc'.
 
@@ -1035,393 +993,21 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 195.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 197.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.195     \chapter
+l.197     \chapter
                   {Introduction} [1
 
 ]
 Chapitre 1.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 209.
-(c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:211: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.211  │
-          
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:212: LaTeX Error: Unicode character ├ (U+251C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.212 ...py] → Récupération des URLs des films
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:212: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.212 ...py] → Récupération des URLs des films
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:212: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.212 ...py] → Récupération des URLs des films
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 212.
-(c:/texlive/2026/texmf-dist/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:213: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.213  │
-          
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:214: LaTeX Error: Unicode character ├ (U+251C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.214 ...] → Construction de la base vectorielle
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:214: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.214 ...] → Construction de la base vectorielle
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:214: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.214 ...] → Construction de la base vectorielle
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:215: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215  │     │
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:215: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215  │     │
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:216: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.216 ...xtraction du contenu des pages Wikipédia
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:216: LaTeX Error: Unicode character ├ (U+251C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.216 ...xtraction du contenu des pages Wikipédia
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:216: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.216 ...xtraction du contenu des pages Wikipédia
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:216: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.216 ...xtraction du contenu des pages Wikipédia
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:217: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.217  │     │
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:217: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.217  │     │
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:218: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.218 ...�� Stockage SQL des données structurées
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:218: LaTeX Error: Unicode character ├ (U+251C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.218 ...�� Stockage SQL des données structurées
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:218: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.218 ...�� Stockage SQL des données structurées
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:218: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.218 ...�� Stockage SQL des données structurées
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:219: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.219        │
-                
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:220: LaTeX Error: Unicode character └ (U+2514)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.220 ...ckage vertorstore des données textuelles
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:220: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.220 ...ckage vertorstore des données textuelles
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:220: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.220 ...ckage vertorstore des données textuelles
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:221: LaTeX Error: Unicode character │ (U+2502)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.221  │
-          
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:222: LaTeX Error: Unicode character └ (U+2514)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.222 ...énération des réponses avec Ollama 3.2
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:222: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.222 ...énération des réponses avec Ollama 3.2
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-c:/Users/selim/LO17/RAG/rag_lo17/rapport/rapport.tex:222: LaTeX Error: Unicode character ─ (U+2500)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.222 ...énération des réponses avec Ollama 3.2
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
 Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:42:37
 (epstopdf)                    size: 276816 bytes
@@ -1429,15 +1015,15 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 225.
+(epstopdf)             \includegraphics on input line 226.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 225.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 226.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 [2
 
-{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+]
 Chapitre 2.
 Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:42:37
@@ -1446,21 +1032,21 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 285.
+(epstopdf)             \includegraphics on input line 263.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 285.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 263.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 [3
 
 ]
-Overfull \hbox (1.11668pt too wide) in paragraph at lines 338--340
-[]\T1/lmss/m/n/10.95 Ensuite l'ex-trac-tion. Pour chaque URL, on ex-trait le texte et les don-n�es avec film_parser.py. 
+Overfull \hbox (8.58533pt too wide) in paragraph at lines 287--288
+\T1/cmss/m/n/10.95 conver-ties en do-cu-ments tex-tuels s�-pa-r�s et in-dex�es avec des m�-ta-don-n�es de type (\T1/cmtt/m/n/10.95 fiche_technique\T1/cmss/m/n/10.95 ,
  []
 
 Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 353.
+(babel)             Reported on input line 297.
 Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:42:37
 (epstopdf)                    size: 276816 bytes
@@ -1468,11 +1054,11 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 353.
+(epstopdf)             \includegraphics on input line 297.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 353.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 297.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
 [4]
 Package epstopdf Info: Source file: <assets/UTC.eps>
@@ -1482,13 +1068,90 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 367.
+(epstopdf)             \includegraphics on input line 334.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 367.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 334.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
  [5]
+
+LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10.95> not available
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 396.
+
+
+Overfull \hbox (486.25761pt too wide) detected at line 396
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+[]|\T1/cmss/m/n/10.95 Coexistence de deux for-mats
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+\T1/cmss/m/n/10.95 HTML Wi-ki-pe-dia (\T1/cmtt/m/n/10.95 <h2> \T1/cmss/m/n/10.95 vs \T1/cmtt/m/n/10.95 <div
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+[]|\T1/cmtt/m/n/10.95 nomic-embed-text \T1/cmss/m/n/10.95 (768 di-men-sions)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+[]|\T1/cmss/m/n/10.95 Pr�fixe \T1/cmtt/m/n/10.95 [Film : <titre>] \T1/cmss/m/n/10.95 ajout� �
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 396--396
+[]|\T1/cmss/m/n/10.95 Calcul s�-quen-tiel des em-bed-dings trop
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+[]|\T1/cmss/m/n/10.95 La re-cherche MMR ($\OML/cmm/m/it/10.95 k \OT1/cmr/m/n/10.95 = 20$\T1/cmss/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 4291) in paragraph at lines 396--396
+\T1/cmtt/m/n/10.95 fetch_k\T1/cmss/m/n/10.95 =100) ra-m�ne trop de bruit
+ []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 396--396
+[]|\T1/cmss/m/n/10.95 Une stra-t�-gie de re-trie-val unique ne
+ []
+
+Package epstopdf Info: Source file: <assets/UTC.eps>
+(epstopdf)                    date: 2026-06-09 22:42:37
+(epstopdf)                    size: 276816 bytes
+(epstopdf)             Output file: <assets/UTC-eps-converted-to.pdf>
+(epstopdf)                    date: 2026-06-09 22:43:22
+(epstopdf)                    size: 3001 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
+(epstopdf)             \includegraphics on input line 396.
+Package epstopdf Info: Output file is already uptodate.
+File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/UTC-eps-converted-to.pdf>
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 396.
+(pdftex.def)             Requested size: 28.46968pt x 22.0pt.
+[6]
+Package epstopdf Info: Source file: <assets/UTC.eps>
+(epstopdf)                    date: 2026-06-09 22:42:37
+(epstopdf)                    size: 276816 bytes
+(epstopdf)             Output file: <assets/UTC-eps-converted-to.pdf>
+(epstopdf)                    date: 2026-06-09 22:43:22
+(epstopdf)                    size: 3001 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
+(epstopdf)             \includegraphics on input line 400.
+Package epstopdf Info: Output file is already uptodate.
+File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/UTC-eps-converted-to.pdf>
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 400.
+(pdftex.def)             Requested size: 28.46968pt x 22.0pt.
+ [7]
 Chapitre 3.
 Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:42:37
@@ -1497,16 +1160,63 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 369.
+(epstopdf)             \includegraphics on input line 419.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 369.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 419.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
-[6
+[8
 
 ]
 Chapitre 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
+
+ []
+
+Package epstopdf Info: Source file: <assets/UTC.eps>
+(epstopdf)                    date: 2026-06-09 22:42:37
+(epstopdf)                    size: 276816 bytes
+(epstopdf)             Output file: <assets/UTC-eps-converted-to.pdf>
+(epstopdf)                    date: 2026-06-09 22:43:22
+(epstopdf)                    size: 3001 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
+(epstopdf)             \includegraphics on input line 429.
+Package epstopdf Info: Output file is already uptodate.
+File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/UTC-eps-converted-to.pdf>
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 429.
+(pdftex.def)             Requested size: 28.46968pt x 22.0pt.
+[9
+
+]
+Chapitre 5.
+
+Overfull \hbox (40.49577pt too wide) in paragraph at lines 433--434
+[][]$\T1/cmtt/m/n/10.95 https : / / fr . wikipedia . org / wiki / Liste _ des _ plus _ gros _ succ % C3 % A8s _ fran % C3 % A7ais _ au _ box-[]office _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
+
+ []
+
+
+Overfull \hbox (29.17903pt too wide) in paragraph at lines 438--439
+[][]$\T1/cmtt/m/n/10.95 https : / / github . com / google-[]gemini / cookbook / blob / main / examples / langchain / Gemini _ LangChain _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
+
+ []
+
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
@@ -1519,42 +1229,35 @@ Package epstopdf Info: Source file: <assets/UTC.eps>
 (epstopdf)                    date: 2026-06-09 22:43:22
 (epstopdf)                    size: 3001 bytes
 (epstopdf)             Command: <repstopdf --outfile=assets/UTC-eps-converted-to.pdf assets/UTC.eps>
-(epstopdf)             \includegraphics on input line 374.
+(epstopdf)             \includegraphics on input line 443.
 Package epstopdf Info: Output file is already uptodate.
 File: assets/UTC-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/UTC-eps-converted-to.pdf>
-Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 374.
+Package pdftex.def Info: assets/UTC-eps-converted-to.pdf  used on input line 443.
 (pdftex.def)             Requested size: 28.46968pt x 22.0pt.
-[7
+[10
 
 ] (./rapport.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
  ***********
-
-
-Package rerunfilecheck Warning: File `rapport.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `rapport.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  518939560E0E74B2E4D1EBBF25FCB517;2117.
+Package rerunfilecheck Info: File `rapport.out' has not changed.
+(rerunfilecheck)             Checksum: 83D11E12F49E14E30433C8967277426B;3383.
  ) 
 Here is how much of TeX's memory you used:
- 35487 strings out of 467167
- 707980 string characters out of 5413692
- 1274560 words of memory out of 5000000
- 64229 multiletter control sequences out of 15000+600000
- 659887 words of font info for 61 fonts, out of 8000000 for 9000
+ 35929 strings out of 467167
+ 715551 string characters out of 5413692
+ 1305081 words of memory out of 5000000
+ 64652 multiletter control sequences out of 15000+600000
+ 644700 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,15n,108p,2531b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rapport.pdf (8 pages, 140797 bytes).
+ 98i,15n,108p,2531b,753s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfso1095.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on rapport.pdf (11 pages, 301406 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
