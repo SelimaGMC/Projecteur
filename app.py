@@ -219,7 +219,7 @@ div[data-testid="stChatMessage"]:has(div[data-testid="chatAvatarIcon-user"]) div
 }
 [data-testid="stChatInput"] textarea {
     background: transparent !important;
-    color: #282828 !important;
+    color: #ececec !important;
     font-size: 0.93rem !important;
     caret-color: #ececec !important;
 }
