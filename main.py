@@ -7,7 +7,6 @@ from retriever import build_knowledge_base, RETRIEVER_DIR as _RETRIEVER_DIR, OLL
 from generator import create_rag_chain
 from langchain_community.vectorstores.chroma import Chroma
 
-os.environ["GOOGLE_API_KEY"] = secrets.GOOGLE_API_KEY
 agent = secrets.CUSTOM_AGENT
 ssl._create_default_https_context = ssl._create_stdlib_context
 
